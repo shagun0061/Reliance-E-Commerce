@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login-Reliance Digital</title>
+    <style>
+         *{
+            margin:0px ;
+            padding: 0px;
+            box-sizing: 0px;
+            background-color: white;
+        }
+        #container{
+            display: flex;
+            /* border: 1px solid red; */
+            width: 100%;
+            height: auto;
+            padding: 2%;
+        }
+        img{
+            width: 66%;
+            height: 333px;
+        }
+        form{
+            /* border: 1px solid red; */
+            width: 22%;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            margin-left: 55px;
+            border:1px solid #ccc
+            /* align-items: center; */
+        }
+        #heading{
+            background-color: #ccc;
+            height: 33px;
+            display: flex;
+            align-items: center;
+            padding-left: 7px;
+        }
+        input,button{
+            height: 33px;
+            /* margin-top: 22px; */
+            width: 88%;
+            margin: auto;
+            padding-left: 7px;
+        }
+        button{
+            background-color: red;
+            color: white;
+            font-weight: 700;
+            margin-top: -22px;
+            width: 90%;
+            border: 0px;
+            height: 36px;
+        }
+        input{
+            border:1px solid #ccc;
+             margin-top: 22px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img src="https://www.reliancedigital.in/medias/6000-Umbrella-Offer-Login-Banner-22-07-2022.jpg?context=bWFzdGVyfGltYWdlc3wxMTMyMTV8aW1hZ2UvanBlZ3xpbWFnZXMvaDQ2L2g4Ni85ODY0ODkxMDM5Nzc0LmpwZ3w0ZWZmNDdlNjE1MzM3NWUyMDBmN2Q3NjlkZTM5NGNjYWExZDE2YTMwYzI0OTYzZTI4OTAzY2Q2YmMzOTg0NDBh" alt="Poster">
+        <form action="" onsubmit="login(event)">
+           <div id="heading">Login / Register</div>
+           <input type="text" id="mobile_no" placeholder="Enter Mobile No">
+           <button>PROCEED</button>
+        </form>
+    </div>
+</body>
+</html>
+
+<script>
+
+    let userData=JSON.parse(localStorage.getItem("RegistrationData")) || [];
+
+    let login=(e)=>{
+        console.log(userData)
+        e.preventDefault();
+        let mobileNo=document.getElementById("mobile_no").value;
+        let flag=false;
+
+        userData.forEach((el) => {
+            if(mobileNo==el.mobile){
+                flag=true;
+                gotoHomapage(el);
+                alert("Login Successful")
+            }
+        });
+
+        if(flag==false){
+            alert("Need to Registration first!")
+        }
+    }
+
+    let gotoHomapage=(e)=>{
+        console.log(e)
+        // localStorage.setItem("loginData",JSON.stringify(e));
+
+        // window.location.href="index.html"
+    }
+</script>

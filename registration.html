@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration-Reliance Digital</title>
+    <style>
+        *{
+            margin:0px ;
+            padding: 0px;
+            box-sizing: 0px;
+            background-color: white;
+        }
+        form{
+            width: 33%;
+            height: auto;
+            border: 1px solid green;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            margin-top: 111px;
+            
+        }
+        form>#heading{
+            height: 33px;
+            background-color: #ccc;
+            padding-top: 11px;
+            padding-left: 7px;
+            
+        }
+        form>hr{
+            width: 100%;
+            color: grey;
+            margin-bottom: 5px;
+        }
+        #verify_box{
+            /* border: 1px solid red; */
+            color: red;
+            width: 88%;
+            margin: auto;
+            height: 33px;
+            /* margin-left: 5%; */
+            margin-top: 25px;
+        }
+         #verify_btn{
+            border: 1px solid red;
+            color: red;
+            width: 22%;
+            height: 33px;
+            font-weight: 700;
+            /* margin-left: 7%; */
+        }
+        form>input{
+            height: 33px;
+            margin: auto;
+            margin-top: 25px;
+        }
+        form>input{
+            border: 1px solid gray;
+            width: 88%;
+            padding-left: 7px;
+        }
+       
+        span{
+            /* color: red; */
+            margin: auto;
+            font-size: 12px;
+            margin-top: 7px;
+            margin-bottom: 22px;
+        }
+        span>a{
+            color: red;
+            font-size:14px;
+            
+        }
+        p{
+            text-align: start;
+            margin-left: 5%;
+            font-size: 12px;
+            margin-top: 7px;
+            width: 88%;
+        }
+        #proceed_btn{
+            border: 1px solid red;
+            background-color: red;
+            color: white;
+            width: 88%;
+            height: 33px;
+            font-weight: 700;
+            margin-left: 7%;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="" onsubmit="register(event)" id="registration_form">
+        <div id="heading">Register New Account</div>
+        <hr>
+        <input type="text" id="f_name" placeholder="First Name*">
+        <input type="text" id="l_name" placeholder="Last name*">
+        <input type="email" id="email" placeholder="Email Address*">
+        <p>Your email address will be used to send order invoice, order updates etc.</p>
+        <!-- <div id="verify_box"><button  id="verify_btn" >VERIFY EMAIL</button></div> -->
+        <input type="text" id="mobile" placeholder="Mobile Number*">
+        <p>Your mobile number will be used to avail benefits such as Jio Mart Cashback and ROne Loyality Points and receive quick notifications.</p>
+        <input type="submit" id="proceed_btn" placeholder="PROCEED">
+        <span>Already Registered?<a href="login.html"> LOGIN</a></span>
+    </form>
+</body>
+</html>
+<script>
+
+    let userArr=JSON.parse(localStorage.getItem("RegistrationData")) || [];
+
+    let register=(e)=>{
+        e.preventDefault();
+        // console.log(e)
+        function constructor_Func(n,l,e,m){
+            this.first_name=n;
+            this.last_name=l;
+            this.email=e;
+            this.mobile=m;
+        }
+
+        let f_name=document.getElementById("f_name").value;
+        let l_name=document.getElementById("l_name").value;
+        let email=document.getElementById("email").value;
+        let mobile=document.getElementById("mobile").value;
+            
+        let userObj;
+        if(!f_name || !l_name || !email || !mobile){
+            alert("Please fill the details");
+        }else{
+         userObj =new constructor_Func(f_name,l_name,email,mobile);
+       
+        console.log(userObj)
+        userArr.push(userObj);
+        localStorage.setItem("RegistrationData",JSON.stringify(userArr));
+        console.log(userArr);
+        window.location.href="login.html";
+        }
+    }
+</script>
