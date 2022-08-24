@@ -1,0 +1,68 @@
+body{
+  overflow-x: hidden;
+}
+
+#upper-navbar {
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#search-bar{
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  margin-top: 5px;
+}
+
+#search-bar div img{
+  margin-left: 70px;
+  width:32%;
+}
+
+input{
+  margin-top: 5px;
+  width: 80%;
+  box-sizing: border-box;
+  padding: 10px;
+  border: none;
+  border-radius: 100px;
+}
+
+.navbar{
+  background-color: #e4252a;
+  margin: -10px;
+}
+
+.cart{
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+/* All icons classes: */
+.fa-search{
+  margin-left: -30px;
+}
+/* All icons classes end here */
+
+*{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #fff;
+}
+/*
+
+.flex{
+  margin-top: 10px;
+  background-image: url('https://knowtechie.com/wp-content/uploads/2022/04/oneplus-10-pro.jpg');
+  background-size: cover;
+  display: flex;
+  background-color: white;
+  border: 1px solid;
+  width: 100%;
+}
+
+.flex ul{
+  list-style: none;
+}
+
+*/
