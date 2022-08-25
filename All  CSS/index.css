@@ -1,6 +1,8 @@
-body{
+body {
   overflow-x: hidden;
 }
+
+/* home page navbar here:*/
 
 #upper-navbar {
   padding: 10px;
@@ -8,18 +10,18 @@ body{
   justify-content: flex-end;
 }
 
-#search-bar{
+#search-bar {
   display: grid;
   grid-template-columns: 1fr 1.5fr 1fr;
   margin-top: 5px;
 }
 
-#search-bar div img{
+#search-bar div img {
   margin-left: 70px;
-  width:32%;
+  width: 32%;
 }
 
-input{
+input {
   margin-top: 5px;
   width: 80%;
   box-sizing: border-box;
@@ -28,110 +30,71 @@ input{
   border-radius: 100px;
 }
 
-.navbar{
+.navbar {
   background-color: #e4252a;
   margin: -10px;
 }
 
-.cart{
+.cart {
   display: flex;
   justify-content: flex-end;
   padding: 10px;
 }
 
-.flex{
-  display: flex;
+#products-bar {
   background-color: #003380;
-  list-style: none;
-  justify-content: space-evenly;
-  font-size: 100%;
+  display: flex;
+  /* justify-content: space-evenly; */
+  cursor: pointer;
 }
 
-ul li{
+#products-bar>li {
   cursor: pointer;
   list-style: none;
-  /* margin-right: 10px; */
-}
-
-ul li ul{
-  display: none;
-  /* border: 1px solid; */
-}
-
-ul li>div:last-child{
-  display: flex;
-  margin-top: 10px;
-  border: 1px solid;
-}
-
-ul li>div:last-child div{
-  border: 1px solid;
-}
-
-ul li:hover ul{
-  display:block
-}
-
-ul li ul li:hover{
-  text-decoration: underline;
-}
-
-/* All icons classes: */
-.fa-search{
-  margin-left: -30px;
-}
-/* All icons classes end here */
-
-*{
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: #fff;
-}
-
-#footer{
-  background-color: #003380;
-  margin: -10px;
-}
-
-.flex{
-  display: flex;
-}
-
-.flex ul{
-  line-height: 35px;
-  margin-right: 120px;
-}
-
-.flex ul li:hover{
-  color: rgb(204, 204, 204);
-}
-
-.flex-div2{
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  padding: 0px 0 0 60px;
-}
-
-.flex-div2>div:last-child img{
-  width: 10%;
-  margin-top: 1%;
-}
-
-#footers-foot{
-  background-color: #0a244a;
-  padding: 10px;
-}
-
-#footers-foot>div:first-child{
-  border-bottom: 1px solid rgb(157, 157, 157);
-}
-
-#footers-foot div:first-child p, #footers-foot div{
-  text-align: center;
+  margin-left: 10px;
   font-size: 12px;
 }
 
-#footers-foot div{
+#products-bar>li:hover>div:first-child{
+  background-color: #e4252a;
+  /* width: 100px; */
+}
+
+#products-bar>li>div:first-child{
+  border: 1px solid;
+  font-weight: bold;
+  text-align: center;
   padding: 10px;
+  box-sizing: border-box;
+}
+
+#products-bar>li:hover .list-divs-flex{
+  display: block;
+  display: flex;
+}
+
+#products-bar>li ul{
+  list-style-type: none;
+}
+
+.list-divs-flex{
+  display: none;
+  border: 1px solid;
+  margin-top: 20px;
+}
+
+/* home page navbar ends here*/
+
+/* All icons classes: */
+.fa-search {
+  margin-left: -30px;
+}
+
+/* All icons classes end here */
+
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #fff;
 }
 
 /*
