@@ -42,30 +42,30 @@ input {
 }
 
 #products-bar {
-  display: flex;
   background-color: #003380;
-  list-style: none;
+  display: flex;
+  /* justify-content: space-evenly; */
   cursor: pointer;
 }
 
 #products-bar>li {
-  border: 1px solid;
   cursor: pointer;
   list-style: none;
+  margin-left: 10px;
   font-size: 12px;
 }
 
-#products-bar>li>div:first-child{
-  font-weight: bold;
-  text-align: center;
-  /* padding: 10px; */
-  border: 1px solid;
-  width: 200px;
-  box-sizing: border-box;
+#products-bar>li:hover>div:first-child{
+  background-color: #e4252a;
+  /* width: 100px; */
 }
 
-#products-bar>li>div:first-child:hover{
-  background-color: #e4252a;
+#products-bar>li>div:first-child{
+  border: 1px solid;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 #products-bar>li:hover .list-divs-flex{
@@ -80,7 +80,7 @@ input {
 .list-divs-flex{
   display: none;
   border: 1px solid;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 /* home page navbar ends here*/
