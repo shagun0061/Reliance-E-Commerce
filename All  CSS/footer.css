@@ -2,11 +2,12 @@
 
 #footer {
   background-color: #003380;
-  margin: -10px;
+  margin: 0 -10px -10px -10px;
 }
 
 .flex {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .flex ul {
