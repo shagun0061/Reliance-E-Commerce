@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computers - Reliance Digital</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            background-color: white;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        h3{
+            font-size: 14px;
+            margin-bottom: 22px;
+        }
+        #bottom_section p{
+            font-size: 12px;
+            margin-bottom: 22px;
+        }
+        ul{
+            font-size: 14px;
+        }
+        li{
+            font-size: 12px;
+        }
+        #top_carousel{
+            border: 1px solid #ccc
+            width: 100%;
+            height: 266px;
+            position: relative;
+        }
+        #top_carousel>img{
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        #container{
+            width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            display: flex;
+            justify-content: space-around;
+        }
+        #left_side{
+            width: 70%;
+            border: 1px solid #ccc;
+        }
+        #right_side{
+            width: 20%;
+            /* border: 1px solid #ccc; */
+        }
+        #carousel_A{
+            height: 133px;
+            display: flex;
+            justify-content: space-between;
+            align-items:center;
+            border: 1px solid #ccc;
+        }
+        #carousel_C{
+            height: 133px;
+            display: flex;
+            justify-content: space-between;
+            align-items:center;
+            border: 1px solid#ccc;
+        }
+        #carousel_B{
+            height: auto;
+            border: 1px solid #ccc;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: auto;
+            grid-gap: 2px;
+            padding: 55px;
+        }
+        #carousel_1{
+            width: 100%;
+            height: 333px;
+            border: 1px solid #ccc;
+            position: relative;
+        }
+        #carousel_1>div{
+            width: 99.5%;
+            height: 99.5%;
+            border: 1px solid #ccc;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            /* grid-template-columns: repeat(5,1fr); */
+            /* flex-wrap:nowrap; */
+        } 
+        #carousel_1>div:hover{
+            cursor: pointer;
+        }
+        #carousel_1>div>div{
+            width: 17%;
+            height: 100%;
+            /* border: 1px solid red; */
+        }
+        #carousel_1 img{
+            width: 50%;
+            display: block;
+            margin: auto;
+            height: 44%;
+            margin-top: 22px;
+            margin-bottom: 22px;
+        }
+        #carousel_1 img:hover{
+            transform: scale(1.09);
+        }
+        .ptitle{
+            color: blue;
+        }
+        .pPrice{
+            font-weight: bold;
+        }
+        /* .pBox{
+            width: 222px;
+        } */
+        #carousel_2{
+            height: 222px;
+            border: 1px solid rgb(48, 205, 87);
+        }
+        #carousel_3{
+            height: 222px;
+            border: 1px solid rgb(48, 205, 87);
+        }
+        #carousel_4{
+            height: 222px;
+            border: 1px solid rgb(48, 205, 87);
+        }
+        #right{
+            position: absolute;
+            right: 10px;
+            top: 111px;
+            border: 0px;
+            color: grey;
+            font-size: 33px;
+            background-color:rgb(212, 212, 212,0.0) ;
+        }
+        #left{
+            position: absolute;
+            left: 10px;
+            top: 111px;
+            border: 0px;
+            color: grey;
+            font-size: 33px;
+            background-color:rgb(212, 212, 212,0.0) ;
+        }
+        #right_btn{
+            position: absolute;
+            right: 10px;
+            top: 111px;
+            border: 0px;
+            color: grey;
+            font-size: 33px;
+            background-color:rgb(212, 212, 212,0.0) ;
+        }
+        #left_btn{
+            position: absolute;
+            left: 10px;
+            top: 111px;
+            border: 0px;
+            color: grey;
+            font-size: 33px;
+            background-color:rgb(212, 212, 212,0.0) ;
+        }
+        .brandimgs{
+            border: 1px solid #ccc;
+            height: 111px;
+        }
+        #right_side>div{
+            width: 90%;
+        }
+        #right_side>div>img{
+            width: 100%;
+            height: 111px;
+        }
+        .broad{
+            height: 5px;
+            color: gray;
+        }
+        table {
+            width: 98%;
+            margin: auto;
+            margin-top: 14px;
+            border: 1px solid grey;
+            border-collapse: collapse;
+            font-family: Roboto, "system-ui", sans-serif;
+            font-size: 15px;
+        }
+        table {
+            display: table;
+            border-collapse: separate;
+            box-sizing: border-box;
+            text-indent: initial;
+            border-spacing: 2px;
+            border-color: grey;
+        }
+        thead>tr>th{
+            background-color:gray;
+            height: 44px;
+            
+        }
+        tbody>tr td{
+            margin: auto;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: separate;
+            text-indent: initial;
+            border-spacing: 0px;
+            margin: auto;
+            margin-top: 25px;
+        }
+        #bottom_section{
+            /* border: 1px solid red; */
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            width: 100%;
+            padding: 5%;
+        }
+        #bottom_Right{
+            width: 33%;
+            /* border: 3px solid green; */
+           
+        }
+        #bottom_Left{
+            width: 66%;
+            /* border: 3px solid blueviolet; */
+            padding: 2%;
+        }
+        li{
+            margin-top: 11px;
+        }
+    </style>
+</head>
+<script src="https://kit.fontawesome.com/39e0af204e.js" crossorigin="anonymous"></script>
+<body>
+    <div id="top_carousel">
+        <img id="posterImg" src="" alt="">
+        <button id="left"><i class="fa-solid fa-arrow-left"></i></button>
+        <button id="right"><i class="fa-solid fa-arrow-right"></i></i></button>
+    </div>
+    <div id="container">
+        <div id="left_side">
+            <div id="carousel_A"></div>
+            <hr class="broad">
+            <div id="carousel_C"></div>
+            <hr class="broad">
+            <div id="carousel_B"></div>
+            <hr class="broad">
+        </div>
+        <div id="right_side">
+            <h2>FROM OUR RESOURCE CENTRE</h2>
+            <div>
+                <p>Windows 11 is finally here</p>
+                <img src="https://www.reliancedigital.in/wp-content/uploads/2021/06/Windows_11_Cover.jpg" alt="windows11">
+            </div>
+            <hr>
+            <div>
+                <p>Apple MacBook Pro 2021 - New in every sense</p>
+                <img src="https://www.reliancedigital.in/wp-content/uploads/2021/10/MacBook_Pro_2021_Cover.jpg" alt="Apple MacBookPro">
+            </div>
+            <hr>
+            <div>
+                <p>Lenovo Legion 7 2021 – Delivering total perfection</p>
+                <img src="https://www.reliancedigital.in/wp-content/uploads/2021/10/Lenovo_Legion_7_2021_COver.jpg" alt="Lenevo Legion 7">
+            </div>
+            <hr>
+            <div>
+                <p>HP Pavilion Aero 2021 – Portability without sacrifices</p>
+                <img src="https://www.reliancedigital.in/wp-content/uploads/2021/11/HP_Pavillion_Aero_Cover.jpg" alt="HP Pavilion Aero 2021 ">
+            </div>
+            <hr>
+        </div>
+        <hr class="broad">
+    </div>
+    <div id="carousel_1">
+        <div id="p_div"></div>
+        <button id="left_btn" onclick="goback()"><i class="fa-solid fa-arrow-left"></i></button>
+        <button id="right_btn" onclick="goNxt()"><i class="fa-solid fa-arrow-right"></i></i></button>
+    </div>
+    <!-- <div id="carousel_2"></div>
+    <div id="carousel_3"></div>
+    <div id="carousel_4"></div> -->
+    <div id="bottom_section">
+        <!-- <div id="bigDescriptionDiv"> -->
+        <div id="bottom_Left">
+            <h3><b> Why Do We Need Laptops and Their Benefits?</b></h3>
+            
+            <p>Electronic gadgets have become an inseparable part of our lives in today's world. Even though smartphones have taken over our lives, and it is impossible to go on with our day-to-day work without them, other electronic gadgets are equally important. A computer was once upon a time a moment of fascination when it was just entering the electronic market. But today, it is a laptop (लैपटॉप) that one can't do without.</p>
+            
+            <!-- <h3>Choosing A Smartphone As Per Operating System</h3> -->
+            
+            <p>Be it a laptop (लैपटॉप) for gaming or your professional work daily – a laptop is a must. There might be many people who are digitally a lot more advanced. However, even for tasks like maintaining sheets, doing presentations, or professional image and video editors, editing is impossible without a proper advanced laptop with all the right features.</p>
+            
+            <p>There are several decisions you need to contemplate about and make when you plan to buy a laptop (लैपटॉप). This includes the budget, the features you are looking for, and the purpose for which you need the laptop – they all lead you to choose the right brand and right laptop that will last for a long time and come in handy in the long run/p>
+                <thead>
+                    <tr>
+                        <th>Features</th>
+                        <th>Android</th>
+                        <th>iOS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Latest Stable Release</th>
+                        <td>Android 10</td>
+                        <td>iOS 13.3.1 and iPadOS 13.3.1</td>
+                    </tr>
+                    <tr>
+                        <th>Customizability</th>
+                        <td>A lot. Can change almost anything</td>
+                        <td>Limited unless jailbroken</td>
+                    </tr>
+                    <tr>
+                        <th>Internet Browsing</th>
+                        <td>Google Chrome (other browsers are available)</td>
+                        <td>Safari (Other browsers are availbale but not as defualt)</td>
+                    </tr>
+                    <tr>
+                        <th>Web Mapping Service</th>
+                        <td>Google Maps</td>
+                        <td>Apple Maps, default as of iOS 6 (Google Maps also available via a separate app download)</td>
+                    </tr>
+                    <tr>
+                        <th>Calls and Messaging</th>
+                        <td>Google Messages. 3rd party apps like Facebook Messenger, WhatsApp, Google Due, Discord, and Skype all work on Android and iOS.</td>
+                        <td>iMessage, Face Time (with other Apple devices only), and the rest of teh apps as in Android</td>
+                    </tr>
+                    <tr>
+                        <th>App Store</th>
+                        <td>Google Play Store - 2,000,000+ apps. Other app stores like Amazon and Aptoide also distribute Android apps.</td>
+                        <td>Apple App Store - 1,000,000+ apps. Apps containing viruses are very rare or nonexistent</td>
+                    </tr>
+                    <tr>
+                        <th>Photos &amp; Videos Backup</th>
+                        <td>Apps are available for an automatic backup of photos and videos. Google photos allows unlimited backup of photos at a compressed quality</td>
+                        <td>Up to 5 GB of photos and videos can be automatically backed up with iCloud, with more paod iCloud storage available via subscription.</td>
+                    </tr>
+                    <tr>
+                        <th>Security</th>
+                        <td>Monthly security updates</td>
+                        <td>Occasional security updates. Security threats are rare.</td>
+                    </tr>
+                </tbody>
+            </table> -->
+            <h3>How to Choose the Right Laptop Essentials?</h3>
+            <h3>1. Laptop Price</h3>
+        
+                <li><span class="liMark">-</span>  Dual SIM</li>
+                <li><span class="liMark">-</span> 1-3GB RAM</li>
+                <li><span class="liMark">-</span> 16-32 GB inbuilt memory</li>
+            </ul> -->
+           <p>Laptop price should be devised keeping the necessary features in mind. The most important feature to look for is that your laptop (लैपटॉप) is portable. Today the most standard size is a 15.6-inch size. However, 12-14 inches makes it easier to carry it wherever you want.</p>
+            <p>You can easily get a laptop with HD options and 4K resolution for everyday use. Focus on the OS it supports, as that also plays a role in how smoothly your laptop works. Gamers – might look for advanced laptops as they need high-end processors</p>
+            <h3>2. Laptop Bag</h3>
+            <p>A laptop bag helps protect your laptop while you travel from place to place. There might be instances where you need to travel for work and need your laptop with you. Within an affordable price range, you are bound to get good quality laptop bags with features such as water-resistance capabilities, able to combat wear and tear, made of durable fabric, and the depth needs to be at least a minimum of half an inch more than that of what your laptop measures to. These are some basic benefits and needs you should be looking out for in your laptop bag. These tips come in handy in selecting the perfect one which will last for a long time.</p>
+            
+            <h3>Types Of Laptops One can Consider Buying:</h3>
+            <ul>  
+                <li>    Touch-screen laptop  </li>  
+                <p>Touch-screen laptops under an affordable budget can expect plenty of handy benefits. A screen of 11.6 inches, Octa-core to Dual-core processors, storage ranging between 32 – 256GB SSD - thee are some basic tips you need to implement when looking for a touch-screen laptop.</p>
+                <p>The benefits of a touch-screen laptop are that it gives you access to improved colour accuracy, reproduction, and vibrancy to tune the brightness as per your will. The display is also a lot glossier than the matte ones in standard laptops. More and more people are finding themselves inclined towards touch-screen laptops.</p>
+                <li>    Gaming laptop </li>
+                <p>Now a day's, the advent of gaming laptops is quite common. Some people have a whole gaming career and have a high-end laptop with all the right features. You can get the perfect gaming laptop (लैपटॉप) well within your budget. However, here are some tips that will help you ensure you have all the necessary features and benefits when you finalise a gaming laptop.</p>
+                <p>The most needed features in such laptops are high-end processor display cards above a certain choice cut and deliver excellent service. These features are perfect for live streaming games, but they are perfect for those who need high-quality features to edit high-resolution photos and videos and make graphics.</p>
+                
+            </ul>
+            <h3>Best Laptop Brands:</h3>
+            <ul>
+                <li>Apple</li>
+                <p>Goes without saying that Apple is one of the prominent laptop (लैपटॉप) brands. It comes with very trustworthy customer support and impeccable user-friendly interfaces. The OS, also known as the Operating system, comes with fewer errors and has all the basic requirements performing with finesse.</p>
+                <p>It is smooth, fast, and very responsive. The most common issue faced by everyone – is the battery life. Still, Apple laptop has an extremely well-built and long-lasting battery life, stunning colour production, and a Retina display.</p>
+                <li>Dell</li>
+                <p>In the category of budget-friendly laptops – Dell laptop is a popular option. The durability and stealthy hardware built are its top-notch qualities. Its lightweight and accompanying professional designs make it rank in the top 10 brands of a good laptop. The battery life is an added benefit.</p>
+                <!-- <p></p> -->
+                <li>HP</li>
+                <p>There was a time when HP laptops were celebrated worldwide as every student found their needed perks in them. This laptop brand is extremely economical and will suit your budget requirement. The brand warranty and dependable customer service are added perks. HP has been a reliable laptop brand for a very long time, and on a day-to-day basis, it qualifies to be a good choice.</p>
+                <!-- <p></p> -->
+                <li>Samsung</li>
+                <p>Samsung is one of the most popular brands in electronic gadgets. While its other products are more trusted, the slim designs and added specifications of Samsung Laptops find itself a suitable place in the list of top laptop brands currently.</p>
+                <p>Especially if you are looking for gaming laptops, Samsung laptops' performance in that department is incredible. The performance has been reported to live up to your expectations truly. You can look at Samsung's incredible laptop devices if you are planning to buy laptops online.</p>
+                <p></p>
+                <li>Lenovo</li>
+                <p>For everyone looking for a premium laptop (लैपटॉप) feel, Lenovo is one of the fiercest competitors in this segment. Their high-end performance is often credited, and there is a varied consumer base for it.</p>
+                <p>From students to gamers to even working professionals – they've all found Lenovo laptops within their range. The specifications of a Lenovo laptop are versatile, and there is one on every budget. The hardware functioning is said to be extremely dependable and durable as well.</p>
+                <li>Buy Best-Selling Laptops at Reliance Digital.</li>
+                <p>Reliance Digital is your one-stop destination to get your hands on that perfect laptop (लैपटॉप) with all kinds of unique specifications. It has a range of laptops in various price ranges and from well-known brands such as Lenovo, Dell, HP, Apple, and Asus, to name a few. All you need to do is log in to Reliance Digital and take your pick based on your budget, required features, and promising technology that suits your taste.</p>
+               
+            </ul>
+            <h3>Popular Laptop Brands:</h3>
+            <p>Dell Laptops | MacBooks | Lenovo Laptops | Asus Laptops | Acer Laptops | Microsoft Laptops | Samsung Laptops | MSI Laptops | Realme Laptops | VAIO Laptops | HP Laptops</p>
+            <h3>Popular Searches on Laptop Prices:</h3>
+            <p>Laptops Under 20000 | Laptops Under 25000 | Laptops Under 30000 | Laptops Under 35000 | Laptops Under 40000 | Laptops Under 45000 | Laptops Under 50000 | Laptops Under 60000 | Laptops Under 70000</p>
+
+            <h3>Popular Searches on Laptop Types:</h3>
+           
+                <li>
+                    <b>Samsung Mobile Phones:</b>
+                    <ul>
+                        <li><p>Samsung is India’s most attractive and trusted brand of mobiles. It has one of the largest lower-priced handsets markets in India. They usually have bigger screens (Around 6-6.4 inches) and have a simple, user-friendly design. They are renowned for their Qualcomm Snapdragon processors and great storage capacity.
+    
+                        </p></li>
+                    </ul>
+                </li>
+                <li>
+                    <b>Oneplus Mobile Phone:</b>
+                    <ul>
+                        <li><p>Oneplus mobile phones are considered as one of the best mid-premium android smartphones in the world. Their mobile is designed to be the perfect companion for all your daily activities in this modern mobile technology.
+    
+                        </p></li>
+                    </ul>
+                </li>
+                <li>
+                    <b>Vivo Mobile Phone:</b>
+                    <ul>
+                        <li><p>Vivo is known for its low-cost and mid-range segment Android phones, the highlight of these phones being camera quality. Their mobile handset is sleeked in design having brilliant camera specifications with impeccable performance and long-lasting battery life. Vivo phones also come with a lot of sensors like proximity sensors, accelerometers, ambient light sensors, etc.
+                        </p></li>
+                    </ul>
+                </li>
+                <li>
+                    <b>Oppo Mobile Phone:</b>
+                    <ul>
+                        <li><p>Oppo mobiles are best known for their impeccable cameras and stylish aesthetics. Oppo phones are selfie experts. The screen is ultra-bright and crisp, and the battery charges really fast.
+                        </p></li>
+                    </ul>
+                </li>
+                <li>
+                    <b>Apple Mobile Phone:</b>
+                    <ul>
+                        <li><p>iPhones are the world's most powerful personal devices. Reception ability, design, software, loudness, and vocal clarity are also superior to most other phones. The camera and image quality of iPhones are unparalleled, they come with a wide range of picture/video modes- the Bokeh mode being the most popular these days. Gaming, photography, videos or storage, iPhone tops in everything.
+    
+                        </p></li>
+                    </ul>
+                </li>
+                <li>
+                    <b> Xiaomi Mobile Phone:</b>
+                    <ul>
+                        <li><p>They are impressive phones focusing mainly on strong battery, multitasking, unique user interface (MIUI), and a strong body build. A must-buy if you want an all-rounder smartphone. They have a strong operating system that allows a better customer experience of mobile phones with reliable quality.
+                        </p></li>
+                    </ul>
+                </li>
+            </ol> -->
+            <h3>Popular Searches on Laptop Processor:</h3>
+            <p>i3 Laptops | i5 Laptops | i7 Laptops | i9 Laptops | Ryzen Laptops | Lenovo i5 Laptops | HP i7 Laptops | Dell i7 Laptops | Lenovo i3 Laptops | Intel Laptops | AMD Laptops</p>
+          
+                <li>Camera quality</li>
+                <li>Processor</li>
+                <li>Build quality</li>
+                <li>Display</li>
+                <li>Battery</li>
+                <li>User interface</li>
+                <li>Storage</li>
+                <li>Extra features</li>
+                <li>Audio/speakers</li>
+            </ol> -->
+            <p>Popular Searches on Laptop Sub-brands:</p>
+            
+            <p>Apple MacBook Air | Apple MacBook Pro | Lenovo Ideapad Laptops | Dell Inspiron Laptops | Asus TUF Laptops | HP Pavilion Laptops | Asus ROG Laptops | Dell Vostro Laptops | HP Chromebook Laptops | Lenovo Yoga Laptops | Acer Nitro Laptops</p>
+            <ul>Related Laptop Buying Guide -
+            <li>      Connecting Laptop To The TV With Just A Few Simple Steps</li>
+            <li>      How To Diagnose Laptop Problems And Fix Them</li>
+            <li>       How To Play PUBG Mobile On A Laptop Or PC</li>
+            </ul>
+            
+        </div>
+        <div id="bottom_Right">
+            <h2>Laptops Price List</h2>
+            <table border="1" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>S.no</th>
+                        <th>Products-Laptops</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td class="mid">Asus HN356W TUF F15 Gaming Laptop (10th Gen Intel Core ...</td>
+                        <td>₹58,999.00</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="mid">Lenovo 41IN IdeaPad Slim 3 Laptop (10th Gen-Intel Core ...</td>
+                        <td>₹31,980.00</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td class="mid">Lenovo 8JIN IdeaPad Slim 3 Laptop (10th Gen-Intel Core ...</td>
+                        <td>₹31,980.00</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td class="mid">HP 15s-fq2626TU Laptop (11th Gen Intel Core i3-1125G4/8...</td>
+                        <td>₹37,9990.00</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td class="mid">HP 15s-fq2627TU Laptop (11th Gen Intel Core i3-1125G4/8...</td>
+                        <td>₹40,999.00</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td class="mid">Asus AU521WS Laptop (11th Gen Intel Core i5-1135G7/16GB...</td>
+                        <td>₹51,999.00</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <HP class="mid">HP 15s-fq4022TU Laptop (11th Gen-Intel Core i5-1155G7/8...</td>
+                        <td>₹51,905.00</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td class="mid">Asus VivoBook 15 EJ502WS Laptop (12th Gen Intel Core i5...</td>
+                        <td>₹57,999.00</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td class="mid">HP 15s-fr5007TU Laptop (12th Gen Intel Core i5-1235U/8G...</td>
+                        <td>₹56,999.00</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td class=""mid">Apple MGN63HNA MacBook Air (Apple M1 Chip/8GB/256GB SSD...</td>
+                        <td>₹94,499.00</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="text-align:center">
+                            Laptops Price List updated on 26-08-2022
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+           
+</body>
+</html>
+<script>
+
+// async function getData(){
+//     let res=await fetch("https://fakestoreapi.com/products");
+//     let data= await res.json();
+//     console.log(data);
+// }
+
+// getData();
+
+let posters=[];
+
+// let posterConsFunc=(i)=>{
+//     this.img=i;
+// }
+function posterConsFunc(i){
+    this.img=i;
+}
+
+
+let img1= new posterConsFunc("https://www.reliancedigital.in/medias/HP-Internet-VM-Laptop-cc-CLP-D.jpg?context=bWFzdGVyfGltYWdlc3wxMDA4NDd8aW1hZ2UvanBlZ3xpbWFnZXMvaDY0L2hlMC85ODY3MjgwODQyNzgyLmpwZ3wwODJjNGRmZDc3YTZhYWQ0YjRmNDViZGY4YzJhNGU4NmU1MjU3Y2QyOTRiNmQ1NzNiNTQ4ZTUwYmExY2UxMTM5")
+let img2= new posterConsFunc("https://www.reliancedigital.in/medias/intel-12th-Gen-Gaming-Laptop-CLP-Banner-13-07-2022.jpg?context=bWFzdGVyfGltYWdlc3wxMzc2Mzl8aW1hZ2UvanBlZ3xpbWFnZXMvaGM2L2hiZS85ODU5OTMzNjAxODIyLmpwZ3xjNGFmMmY1OWNlZWJiMmE0N2Y1OGIyMDc2YjBkYjllOWFkMWYzYWMyZTUyMTVkZTY3MTMyOTQ0YzFlZWYxMWVj")
+let img3= new posterConsFunc("https://www.reliancedigital.in/medias/Samsung-Galaxy-Book-RD-CLP-D-Banner.jpg?context=bWFzdGVyfGltYWdlc3w5NTI5MHxpbWFnZS9qcGVnfGltYWdlcy9oNzUvaGNiLzk4NzA5MTYyNTU3NzQuanBnfGIwMGIzYmEwYzJjOWI1MzkxYTc0NDdlMWJhYzMzMTFlYzVkYjM5NWY0ZWU5NDEwZGQ0YWE3OTQ1MmQzZDlhYTE")
+let img4= new posterConsFunc("https://www.reliancedigital.in/medias/Laptops-D-CLP-Banner-15.07.jpg?context=bWFzdGVyfGltYWdlc3wxMDk1NTJ8aW1hZ2UvanBlZ3xpbWFnZXMvaGYwL2g5NC85ODYyMjA2NzgzNTE4LmpwZ3xmMWMwYzdlNjA2MWUzZDA4MTJiYjAzYmMyMDA1NjdhOTgyY2Q3MGQwMWViYjMyNmQxMjNjZmRmNWU5ODVhNjM1")
+let img5= new posterConsFunc("https://www.reliancedigital.in/medias/MSI-Laptops-at-never-before-prices-14-06-2022.jpg?context=bWFzdGVyfGltYWdlc3wxMjI0NTh8aW1hZ2UvanBlZ3xpbWFnZXMvaGE1L2gwYS85ODYyMjA2OTE0NTkwLmpwZ3w4ODcwMGM2MmY2ZmFjMGQ0YmYxZGYwNWY5OGY4ZDE4YjI2NGI0NzNjMGRlZjZmMjczYTk3MzRlODVmOTMwYjA5")
+let img6= new posterConsFunc("https://www.reliancedigital.in/medias/Lenovo-Doodle-Workshop-Carousel-Banner-26-07-2022.jpg?context=bWFzdGVyfGltYWdlc3wxMzE1NDV8aW1hZ2UvanBlZ3xpbWFnZXMvaDlmL2g2NC85ODY3MTQ5NTQxNDA2LmpwZ3w4Njk4NjNmOTUyZDJhMjg0NTJkMDNiNGQyZmExNjZlNTZkZjQ1ZDdmYmFiMzU2N2NlYTY3MDhmNTM1ZDI1Zjk2")
+let img7= new posterConsFunc("https://www.reliancedigital.in/medias/HP-Spectre-01-RD-CLP-Bannrer-Desktop.jpg?context=bWFzdGVyfGltYWdlc3w5ODk2NXxpbWFnZS9qcGVnfGltYWdlcy9oOWMvaGQwLzk4NjcyNzkyNjk5MTguanBnfDRhN2Y2YjJkNDVlODNjYTEzYjFjODU3NDY0YjYyY2YxMDUzZTM5NWI0MjIyMzczNjNkYjRkNTZiMzc0YmFlNGE");
+
+posters.push(img1,img2,img3,img4,img5,img6,img7);
+
+// console.log(posters)
+let id1;
+let i=0;
+let topCarousel=document.getElementById("top_carousel");
+let topCarouselImg=document.getElementById("posterImg")
+function top_carousel(){
+   
+    id1=setInterval(function(){
+        // topCarousel.innerHTML=null;
+        topCarouselImg.src="";
+        if(i>=posters.length){
+        i=0;
+        }
+        let img=document.createElement("img");
+        // console.log(posters[0].img)
+        topCarouselImg.src=posters[i].img;
+        // img.setAttribute("class","posterImg")
+        // topCarousel.append(img);
+        img.addEventListener("click",function(){
+            stop();
+        });
+        i++;
+    },2000);
+};
+
+top_carousel();
+
+function stop(){
+    clearInterval(i)
+}
+
+let lftbtn=document.getElementById("left");
+console.log(lftbtn);
+let rgtbtn=document.getElementById("right");
+lftbtn.addEventListener("click",changeImageToPrevious);
+rgtbtn.addEventListener("click",changeImageToNxt)
+
+function changeImageToPrevious(){
+    // console.log("abc");
+    if(i==0){
+        i=posters.length-1
+    }else{
+        i--
+    }
+    topCarouselImg.src=posters[i].img;
+}
+
+function changeImageToNxt(){
+    // console.log("abc");
+    if(i>=posters.length-1){
+        i=0;
+    }else{
+        i++;
+    }
+    topCarouselImg.src=posters[i].img;
+}
+
+let brandimgs=[
+    "https://www.reliancedigital.in/medias/HP-Logo.jpg?context=bWFzdGVyfGltYWdlc3w3MDE0fGltYWdlL2pwZWd8aW1hZ2VzL2g0MC9oN2YvOTExNzQyMTE0MjA0Ni5qcGd8NmJiNTU2N2FlZGQ5ZGFmMTU1NzNhMzRmNmU1NmVkNTA1MjNjYjE4MjQxMmZhZGRkOGZhNDliNDU3ZWFiODdjZg",
+    "https://www.reliancedigital.in/medias/Lenovo-Logo.jpg?context=bWFzdGVyfGltYWdlc3w2ODM5fGltYWdlL2pwZWd8aW1hZ2VzL2gxOS9oN2EvOTExNzQyMTMzODY1NC5qcGd8YTRiNzM0MzE5MDliMmRkYjVmMmUzZGYzZjNlYTJiZjIzODJjODFhNzVlMjgyMDRlNTlhM2MzNDg3NGQxNzZlMg",
+    "https://www.reliancedigital.in/medias/Dell-Logo.jpg?context=bWFzdGVyfGltYWdlc3w2NDU1fGltYWdlL2pwZWd8aW1hZ2VzL2gyZi9oZjQvOTExNzQyMTIwNzU4Mi5qcGd8OGQ0YWQ0NzFmZGEwNjAyNWRjODVmMmI0MTk1NGNkM2U4MDg2ZTYyMDRkN2U0MmZlOTEzNWE2M2U4ZWQ2NDZkOA",
+    "https://www.reliancedigital.in/medias/Acer.jpg?context=bWFzdGVyfGltYWdlc3w2Mzk1fGltYWdlL2pwZWd8aW1hZ2VzL2gxOS9oOWIvOTg1NzUxNDAxMjcwMi5qcGd8YjY5NTFmNmE4NWY1NjYwNDY1ZTc0MmNlZmQwYThkYTE2NTEyZGY4YzNmZjIxMGJlNTk2MDJjY2ZkN2YxMGU4Nw",
+    "https://www.reliancedigital.in/medias/Apple-Logo-1.jpg?context=bWFzdGVyfGltYWdlc3wyMjc2fGltYWdlL2pwZWd8aW1hZ2VzL2g3Ny9oMTIvOTExNzQyMTI3MzExOC5qcGd8MzZiYjcyM2E4MzNlZWFmY2I1MDFkMjczYzBlOGQwNTE5ZThhNTRiZTZmNTYxODllNDk3NWQ2YmQ4ZDE3YWQ2NQ",
+    "https://www.reliancedigital.in/medias/Asus-Logo.jpg?context=bWFzdGVyfGltYWdlc3w2MjIxfGltYWdlL2pwZWd8aW1hZ2VzL2g5ZS9oMTcvOTExNzQyMTQ2OTcyNi5qcGd8MzM0ZTA3M2Q5M2NhYzlmNGM2MGNkZWIzNGE2OTA1M2EyYjkxYWNhM2NhOTk5MDI3Mjk5YzdiYTg5ZjY4NDAyNw",
+    "https://www.reliancedigital.in/medias/Laptops-Shop-By-Brands-Avita.jpg?context=bWFzdGVyfGltYWdlc3w3MTk1fGltYWdlL2pwZWd8aW1hZ2VzL2g2OS9oMTUvOTU4NTU4NDgzMjU0Mi5qcGd8ZmNkMmI3YmEzZjZkNjc2ZGY0ZDBkMzU3NWYxMGJiOGNkY2Q3YjMzZDVmZDgyYmQyZGI3NTA3NGJiYjZhODgxOQ",
+    "https://www.reliancedigital.in/medias/Laptops-Shop-By-Brands-VAIO.jpg?context=bWFzdGVyfGltYWdlc3wzMjEwfGltYWdlL2pwZWd8aW1hZ2VzL2hiZS9oNDkvOTU4NTU4NDg5ODA3OC5qcGd8YmMyNWNjNTViNzg1Mzg1OGU4ZDNjYTcxYzA5ZDA4MGNiNjM4YTM3MTJhYTYxODQ5YmI0ZmY0ZjlhZTYzYWUwMw",
+];
+
+let carousel_B=document.getElementById("carousel_B");
+brandimgs.forEach(function(el){
+    let img=document.createElement("img");
+    img.src=el;
+    img.setAttribute("class","brandimgs")
+    carousel_B.append(img)
+});
+
+let categoryimgs=[
+        "https://www.reliancedigital.in/medias/SHOP-BY-CATEGORY-Basic-use-laptops.jpg?context=bWFzdGVyfGltYWdlc3wzMjM0fGltYWdlL2pwZWd8aW1hZ2VzL2hiOC9oZjAvOTQ3OTg0NDIwMDQ3OC5qcGd8MmMyZTZmMDllZThkY2RhNjU5OGQ4M2VhNGI0NzBhMDMxNzU4NzMzNTYwYWM0ZDJmMzQzMDQ4ZjczODc2ZDUwZQ",
+        "https://www.reliancedigital.in/medias/SHOP-BY-CATEGORY-Student-Laptops.jpg?context=bWFzdGVyfGltYWdlc3wzNzkwfGltYWdlL2pwZWd8aW1hZ2VzL2hhMS9oZjkvOTQ3OTg0NDI2NjAxNC5qcGd8Nzc5ZWYzNTEwMzY4YmE5MjgxZTYzYmI3ZmVjZTkzZjJjYTg3ZGM1YjgxYmIzOWFiNWQ0NzYxZTM0MWU0ODEyNg",
+        "https://www.reliancedigital.in/medias/SHOP-BY-CATEGORY-Thin-and-light-Laptops.jpg?context=bWFzdGVyfGltYWdlc3wzMzA4fGltYWdlL2pwZWd8aW1hZ2VzL2g0MC9oN2IvOTQ3OTg0NDMzMTU1MC5qcGd8YzgyYTYzY2ZjNTBmMGM1Zjc3ZjcxODhkMDFlM2FjZDY4NzNlMWIxOTYxMTJjMTg3NTJmNGQxM2Q5ZGVhZDY1NA",
+        "https://www.reliancedigital.in/medias/SHOP-BY-CATEGORY-Multi-Tasking-Laptops.jpg?context=bWFzdGVyfGltYWdlc3wzNzE1fGltYWdlL2pwZWd8aW1hZ2VzL2g5NS9oYWYvOTQ3OTg0NDM5NzA4Ni5qcGd8N2MzNzNkZTY1YTM1NDQzY2NmN2U2OTYwYmIyM2UwZDEwNDdlNGVlMTgyMjhmMjk4ODFiNGM2YWUxNjMzZTUzNA",
+        "https://www.reliancedigital.in/medias/SHOP-BY-CATEGORY-Gaming-Laptops.jpg?context=bWFzdGVyfGltYWdlc3wzNjQ3fGltYWdlL2pwZWd8aW1hZ2VzL2g3Ny9oMTYvOTQ3OTg0NDQ2MjYyMi5qcGd8Njg2MzcwYmJkODUwNWUyZjM4Yzg0ZDlkZmZkZGI4NTgzYzZkY2E5M2VkNzM5YmJlNzAwODU3MjliYjU4Yjk3Yg",
+        "https://www.reliancedigital.in/medias/SHOP-BY-CATEGORY-Content-creator-Laptops.jpg?context=bWFzdGVyfGltYWdlc3w0MjQ3fGltYWdlL2pwZWd8aW1hZ2VzL2g1Yy9oMzUvOTQ3OTg0NDUyODE1OC5qcGd8NzZiOGQ0YWI5NjBhZjFmZjgzOGQ4ZWIwMmY5ODdhZjIyNzdkNTU4Njc5NjJjNjdiODYxNTQxNmU3ODhhOGMwMg",
+    ]
+let carousel_A=document.getElementById("carousel_A");
+categoryimgs.forEach(function(el){
+    let img=document.createElement("img");
+    img.src=el;
+    img.setAttribute("class","categoryimgs")
+    carousel_A.append(img)
+});
+
+let processorimgs=[
+        "https://www.reliancedigital.in/medias/Shop-by-Processor-Core-i5.jpg?context=bWFzdGVyfGltYWdlc3w3MjE0fGltYWdlL2pwZWd8aW1hZ2VzL2hjZC9oOGQvOTI5OTk3Nzk5NDI3MC5qcGd8MjEyN2YyYWVmNGFhYjdjN2E0NjYwNzJhMmIwNTFmYTBmYTc0MmM3MjlhMTY2ZjViOWNjMGNkZDE2MWE4ZDYyZg",
+        "https://www.reliancedigital.in/medias/Shop-by-Processor-Core-i5.jpg?context=bWFzdGVyfGltYWdlc3w3MjE0fGltYWdlL2pwZWd8aW1hZ2VzL2hjZC9oOGQvOTI5OTk3Nzk5NDI3MC5qcGd8MjEyN2YyYWVmNGFhYjdjN2E0NjYwNzJhMmIwNTFmYTBmYTc0MmM3MjlhMTY2ZjViOWNjMGNkZDE2MWE4ZDYyZg",
+        "https://www.reliancedigital.in/medias/processor-i7-i9.jpg?context=bWFzdGVyfGltYWdlc3w3NzQ2fGltYWdlL2pwZWd8aW1hZ2VzL2hhNS9oNWEvOTI5OTk3ODA1OTgwNi5qcGd8OThlMGU3OWI1YjU5NWRmZDZjZTNlZjQ1NDg4Y2ExMGI0MGY3M2ZkOTVjYWFlNjEyMTk4ODUyM2Y2NTlkMjE3MA",
+        "https://www.reliancedigital.in/medias/processor-Ryzen.jpg?context=bWFzdGVyfGltYWdlc3w3MjE3fGltYWdlL2pwZWd8aW1hZ2VzL2g1ZC9oNTAvOTI5OTk3ODE5MDg3OC5qcGd8OThhMWE1YWMzMDM5ZWFiOTQ2YzU3MjI0NTJhY2YzOThhOGRkNDU2YjY5NjhmMjk1NmIxYWQ3NGM1YzVhZTgwYg",
+        "https://www.reliancedigital.in/medias/Shop-by-Processor-Celeron-PQC.jpg?context=bWFzdGVyfGltYWdlc3w4MDA0fGltYWdlL2pwZWd8aW1hZ2VzL2g4ZS9oY2IvOTI5OTk3ODQyMDI1NC5qcGd8ZmY2MzA3NjYxZTk1OTE5YjBhNmFmNTFkNjhmYzM1ZGE3ZjQ0YmZlNDVjMWIzNjhmM2YzODhkM2Y2ZTExZTNkYw",
+    ]
+
+let carousel_C=document.getElementById("carousel_C");
+processorimgs.forEach(function(el){
+    let img=document.createElement("img");
+    img.src=el;
+    img.setAttribute("class","processorimgs")
+    carousel_C.append(img)
+});
+
+
+
+let arr1=[];
+let arr2=[];
+let arr3=[];
+let arr4=[];
+let data;
+let start;
+let end;
+
+async function getProductData(){
+    let res=await fetch("https://fakestoreapi.com/products/");
+     data=await res.json();
+    // console.log(data)
+    // append(data)
+    // let gap=5;
+    start=0;
+    end=(data.length/4);
+     let arr1=[]
+    for(let i=start;i<end;i++){
+        arr1.push(data[i]);
+    }
+    // for(let i=5;i<(data.length/4)+5;i++){
+    //     arr2.push(data[i]);
+    // }
+    // for(let i=10;i<(data.length/4)+10;i++){
+    //     arr3.push(data[i]);
+    // }
+    // for(let i=15;i<(data.length/4)+15;i++){
+    //     arr4.push(data[i]);
+    // }
+console.log(arr1,arr2,arr3,arr4)
+append(arr1)
+}
+
+getProductData();
+
+
+function goNxt(){
+    let arr1=[]
+    start+=1;
+    end+=1;
+    if(end>data.length){
+        end=(data.length/4);
+    }
+    if(start>data.length-5){
+        start=0;
+    }
+    for(let i=start;i<end;i++){
+        arr1.push(data[i]);
+    }
+    append(arr1)
+}
+function goback(){
+    let arr1=[]
+    
+    end-=1;
+    start=end-5;
+    if(end<4){
+        end=data.length-1;
+        start=(data.length-1)-5;
+    }
+    // if(start<5){
+    //     start=data.length-5;
+    // }
+    for(let i=end;i>=start;i--){
+        arr1.push(data[i]);
+    }
+    append(arr1)
+}
+
+function append(data){
+    let container=document.getElementById("p_div");
+    container.innerHTML=null;
+
+    data.forEach(function(el){
+        let div=document.createElement("div");
+        div.setAttribute("class","pBox");
+        let img=document.createElement("img");
+        img.src=el.image;
+        let name=document.createElement("p");
+        name.innerText=el.title;
+        name.setAttribute("class","ptitle")
+        let cat=document.createElement("p");
+        cat.innerText=`Category- Rs${el.category}`;
+        // let des=document.createElement("p");
+        // des.innerText=el.description;
+        let pri=document.createElement("p");
+        pri.innerText=`Price:- Rs.${el.price}`;
+        pri.setAttribute("class","pPrice")
+        let rating=document.createElement("p");
+        rating.innerText=`Rating:- ★${el.rating.rate}★`;
+        div.addEventListener("click",function(){
+            addToCart(el);
+        })
+        div.append(img,name,cat,pri,rating);
+        container.append(div)
+    });
+
+}
+
+
+function addToCart(el){
+    console.log(el);
+}
+</script>
