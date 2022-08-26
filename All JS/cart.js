@@ -32,36 +32,36 @@ let x = user.length;
 document.querySelector("#totalitems").innerText = `My Cart (${x} Items)`;
 
 //? plusfun
-let plusfun = (price) => {
-  let x = document.querySelector("#changecen").value;
+let plusfun = (price,cen) => {
+  let x = cen.value;
   x = +x + 1;
   if (x < 10) {
-    document.querySelector("#changecen").value = x;
+    cen.value = x;
     totalprice += price;
     document.querySelector("#TotalPriceCArt").innerText = totalprice.toFixed(2);
     document.querySelector("#TotalcartAmount").innerText =
       totalprice.toFixed(2);
+      localStorage.setItem("totalprice",JSON.stringify(totalprice))
   }
 };
 
 //? minfun
-let minfun = (price) => {
-  let x = document.querySelector("#changecen").value;
+let minfun = (price,cen) => {
+  let x = cen.value;
   x = +x;
   if (x !== 1) {
-    document.querySelector("#changecen").value = x - 1;
+    cen.value = x - 1;
     totalprice -= price;
     document.querySelector("#TotalPriceCArt").innerText = totalprice.toFixed(2);
     document.querySelector("#TotalcartAmount").innerText =
       totalprice.toFixed(2);
+      localStorage.setItem("totalprice",JSON.stringify(totalprice))
   }
 };
 
                                       //!  Append
 
 let append = (data) => {
-  console.log("🚀 ~ file: cart.js ~ line 63 ~ append ~ data", data)
-  
   totalprice=0;
   document.querySelector("#cartProduct").innerHTML="";
   
@@ -90,7 +90,7 @@ let append = (data) => {
     let min = document.createElement("button");
     min.innerText = "-";
     min.addEventListener("click", function () {
-      minfun(ele.price);
+      minfun(ele.price,cen);
     });
 
     let cen = document.createElement("input");
@@ -100,7 +100,7 @@ let append = (data) => {
     let plus = document.createElement("button");
     plus.innerText = "+";
     plus.addEventListener("click", function () {
-      plusfun(ele.price);
+      plusfun(ele.price,cen);
     });
 
     let quantity = document.createElement("div");
@@ -153,6 +153,7 @@ let append = (data) => {
   });
   document.querySelector("#TotalPriceCArt").innerText = totalprice.toFixed(2);
 document.querySelector("#TotalcartAmount").innerText = totalprice.toFixed(2);
+localStorage.setItem("totalprice",JSON.stringify(totalprice))
 };
 
 append(user);
@@ -175,6 +176,7 @@ let masaifun=()=>{
    TA=+TA;
    TA=TA/10*3
    document.querySelector('#TotalcartAmount').innerText=TA
+   localStorage.setItem("totalprice",JSON.stringify(TA))
     document.querySelector('#cartdelcha').style.display="none"
     document.querySelector('#cartdelchad').style.display="flex"
    }
