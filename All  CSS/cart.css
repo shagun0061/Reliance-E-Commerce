@@ -98,6 +98,7 @@
   border-radius: 5px;
   margin: auto;
   margin-top: 4px;
+   
 }
 #CPupperdiv {
   /* border: 1px solid red; */
@@ -106,50 +107,64 @@
   display: grid;
   grid-template-columns: 20% 40% 40%;
 }
-#CPupperdiv>div {
-    /* border: 1px solid red; */
-     
-  }
-  #CPupperdiv>div:last-child {
-     text-align: end;
-     
-  }
+
+#CPupperdiv > div:last-child {
+  text-align: end;
+}
 #lowerdiv {
   /* border: 1px solid red; */
   width: 100%;
   height: 15%;
-   
-  
 }
 #lowerdiv > button:first-child {
-    width: 50%;
-    height: 100%;
-    color: blue;  
+  width: 50%;
+  height: 100%;
+  color: blue;
 }
 #lowerdiv > button:last-child {
-    width: 50%;
-    height: 100%;
-    color: blue;  
+  width: 50%;
+  height: 100%;
+  color: blue;
 }
-#threebtnouter{
-    width: 100%;
-    height:  30%;
-    /* border: 1px solid black; */
+#threebtnouter {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  /* border: 1px solid black; */
+}
+#threebtnouter>input {
+  margin-top: 6px;
+  margin-left: 20px;
+  width:  25px;
+  height: 20px;
+  font-size: 20px;
+  font-family: fantasy;
+}
+#threebtnouter > button {
+  height: 25px;
+  margin-top: 6px;
+  margin-left: 20px;
+  font-size: 20px;
+  font-family: fantasy;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#oneimg {
+  width: 70%;
+  height: 75%;
+  padding: 10px;
+}
+#changecen{
+  text-align: center;
+}
+.discriptiondiv{
+  padding-right: 10px;
+}
 
-}
-#threebtnouter>button{
-     /* display: flex; */
-     /* flex-direction: column; */
-     margin-top:6px;
-     margin-left: 20px;
-     font-size: 20px;
-     font-family: fantasy; 
-    
-     
-
-}
-#oneimg{
-width: 70%;
-height: 75%;
-padding: 10px;
+#cartdelchad{
+  display: flex;
+  justify-content: space-between;
+  color: green;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }

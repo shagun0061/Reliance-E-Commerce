@@ -29,25 +29,30 @@
         <div id="cartcheckout1">
           <div id="Coupon">
             <input type="text" name="" id="Couponin" placeholder="Coupon Code"/>
-            <!-- <button id="CouponAplly">APPLY</button> -->
-            <input type="submit" name="" id="CouponAplly" value="APPLY" />
+            <button id="CouponAplly">APPLY</button>
+            <!-- <input type="submit" name="" id="CouponAplly" value="APPLY" /> -->
           </div>
 
           <h3>PRICE DETAILS</h3>
           <!-- PRICE -->
           <div id="cartPrice">
             <p>Price</p>
-            <h3>0000</h3>
+            <h3 id="TotalPriceCArt">0000</h3>
           </div>
-          <div id="cartdelcha">
+          <div id="cartdelcha" style="display: flex ;" >
             <p>Delivery Charges</p>
             <h3>FREE</h3>
           </div>
+          <div id="cartdelchad" style="display:none;" >
+            <p>Discount</p>
+            <h3>30%</h3>
+          </div>
+           
           <hr />
 
           <div id="AMOUNT_PAYABLE">
             <h3>AMOUNT PAYABLE</h3>
-            <h3>0000</h3>
+            <h3 id="TotalcartAmount">0000</h3>
           </div>
         </div>
         <h5 style="color:gray ; font-family: sans-serif;">
