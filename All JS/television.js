@@ -34,3 +34,33 @@ let images=document.querySelector("#crauseImg");
         images.setAttribute("src",imgArray[imgNum]);
     });
 
+// fetch the API
+
+
+// let url= "https://fakestoreapi.com/products/"
+
+let data= async ()=>{
+    const url=`https://fakestoreapi.com/products/`
+    let res=await fetch(url)
+    let me=await res.json()
+    console.log(me);
+    Append(me);
+}
+
+
+let Append=(data)=>{
+    let container=document.getElementById("conatiner");
+    container.innerHTML=null;
+    data.forEach(el=>{
+        let div=document.createElement("div");
+
+        let image=document.createElement("img");
+        image.src=el.image
+
+        let prc=document.createElement("p");
+        prc.innerText=el.price;
+
+        div.append(image,prc);
+        container.append(div);
+    })
+}

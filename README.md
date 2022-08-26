@@ -10,3 +10,5 @@ Clone of the webpage: reliancedigital.in/
 
 Responsibilities - 
 Priyanshu: Home Page(Navbar + Footer + Products Sections + Animations + Funcationality)
+
+ProductKey="CARTPRODUCT"
