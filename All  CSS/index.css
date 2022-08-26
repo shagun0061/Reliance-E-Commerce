@@ -204,6 +204,7 @@ input {
   display: grid;
   background-color: #f7f7f7;
   align-items: center;
+  padding: 5px;
 }
 
 #div6>div>div>div{
