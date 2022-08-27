@@ -12,6 +12,12 @@ let ftr = document.getElementById("footer")
 
 ftr.innerHTML = footer();
 
+let user = JSON.parse(localStorage.getItem('loginData')) || false;
+let login = document.querySelector('#L');
+let flag = JSON.parse(localStorage.getItem('loginKey')) || false;
+if(flag){
+  login.innerText = `Hi ${user.first_name}`;
+}
 
 let product = JSON.parse(localStorage.getItem("CART_PRODUCT")) || [];
 

@@ -1,4 +1,21 @@
+import brandNavbar from "../components/brandNavbar.js"
 
+let navbar=document.getElementById("nav")
+
+navbar.innerHTML=brandNavbar();
+
+import footer from "../components/footer.js"
+
+let ftr=document.getElementById("footer")
+
+ftr.innerHTML=footer();
+
+let user1 = JSON.parse(localStorage.getItem('loginData')) || false;
+let login = document.getElementById('L');
+let flag = JSON.parse(localStorage.getItem('loginKey')) || false;
+if(flag){
+  login.innerText = `Hi ${user1.first_name}`;
+}
 
 //For crauser div
 
@@ -146,17 +163,5 @@ function addToCart(el){
     window.location.href="addToCart.html"
 }
 
-
-
-
-import brandNavbar from "../components/brandNavbar.js"
-
-let navbar=document.getElementById("nav")
-
-navbar.innerHTML=brandNavbar();
-
-import footer from "../components/footer.js"
-
-let ftr=document.getElementById("footer")
-
-ftr.innerHTML=footer();
+document.getElementById("left_btn").addEventListener("click",goback);
+document.getElementById("right_btn").addEventListener("click",goNxt);

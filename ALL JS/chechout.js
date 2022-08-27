@@ -3,11 +3,12 @@ import brandNavbar from "../components/brandNavbar.js";
 document.querySelector("#navbar").innerHTML = brandNavbar();
 import footer from "../components/footer.js";
 document.querySelector("#footer").innerHTML = footer();
-
-
-
-
-
+let user1 = JSON.parse(localStorage.getItem('loginData')) || false;
+let login = document.querySelector('#L');
+let flag = JSON.parse(localStorage.getItem('loginKey')) || false;
+if(flag){
+  login.innerText = `Hi ${user1.first_name}`;
+}
 
 document.querySelector("#newAddress").addEventListener("click", address);
 function address() {

@@ -11,8 +11,6 @@ let ftr=document.getElementById("footer")
 
 ftr.innerHTML=footer();
 
-
-
 let userArr=JSON.parse(localStorage.getItem("RegistrationData")) || [];
 
 let register=(e)=>{

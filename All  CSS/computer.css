@@ -10,6 +10,7 @@
 body{
     overflow: hidden;
 }
+
 h3{
     font-size: 14px;
     margin-bottom: 22px;
@@ -22,11 +23,12 @@ h3{
     font-size: 12px;
     margin-bottom: 22px;
 }
-ul{
+#des ul{
     font-size: 14px;
     font-weight: 500;
 }
-li{
+
+#des li{
     font-size: 12px;
 }
 #top_carousel{
@@ -196,7 +198,8 @@ li{
     height: 5px;
     color: gray;
 }
-table {
+
+#des table {
     width: 98%;
     margin: auto;
     margin-top: 14px;
@@ -205,7 +208,7 @@ table {
     font-family: Roboto, "system-ui", sans-serif;
     font-size: 15px;
 }
-table {
+#des table {
     display: table;
     border-collapse: separate;
     box-sizing: border-box;
@@ -213,17 +216,19 @@ table {
     border-spacing: 2px;
     border-color: grey;
 }
-thead>tr>th{
+
+#des thead>tr>th{
     background-color:gray;
     height: 44px;
+    width: 25px;
     
 }
-tbody>tr td{
+#des tbody>tr td{
     margin: auto;
     text-align: center;
 }
 
-table {
+#des table {
     border-collapse: separate;
     text-indent: initial;
     border-spacing: 0px;
@@ -252,6 +257,7 @@ table {
     /* border: 3px solid blueviolet; */
     padding: 2%;
 }
-li{
+
+#des li{
     margin-top: 11px;
 }

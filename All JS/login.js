@@ -12,7 +12,6 @@ let ftr = document.getElementById("footer")
 ftr.innerHTML = footer();
 
 
-
 let userData = JSON.parse(localStorage.getItem("RegistrationData")) || [];
 
 let login = (e) => {

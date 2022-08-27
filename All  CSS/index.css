@@ -27,6 +27,7 @@ body {
 
 .input {
   margin-top: 5px;
+  color: #000;
   width: 80%;
   box-sizing: border-box;
   padding: 10px;
@@ -48,7 +49,6 @@ body {
 #products-bar {
   background-color: #003380;
   display: flex;
-  /* justify-content: space-evenly; */
   cursor: pointer;
 }
 
@@ -61,7 +61,6 @@ body {
 
 #products-bar>li:hover>div:first-child{
   background-color: #e4252a;
-  /* width: 100px; */
 }
 
 #products-bar>li>div:first-child{
@@ -83,13 +82,9 @@ body {
 
 .list-divs-flex{
   display: none;
-  /* border: 1px solid; */
   margin-top: 20px;
 }
 
-/* home page navbar ends here*/
-
-/* All icons classes: */
 .fa-search {
   margin-left: -30px;
 }

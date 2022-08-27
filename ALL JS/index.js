@@ -5,7 +5,6 @@ import brandNavbar from '../components/brandNavbar.js'
 let footer = document.querySelector("#footer");
 footer.innerHTML = foot();
 let user = JSON.parse(localStorage.getItem('loginData')) || false;
-let login = document.querySelector('#L');
 
 let cart = document.querySelector("#C");
 
@@ -20,6 +19,7 @@ function gotocart(){
 }
 cart.addEventListener('click', gotocart);
 
+let login = document.querySelector('#L');
 let flag = JSON.parse(localStorage.getItem('loginKey')) || false;
 if(flag){
   login.innerText = `Hi ${user.first_name}`;

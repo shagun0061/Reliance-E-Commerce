@@ -3,14 +3,17 @@
 #footer {
   background-color: #003380;
   margin: 0 -10px -10px -10px;
+  color: #fff;
 }
 
 .flex {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  padding-left: 2%;
 }
 
 .flex ul {
+  /* font-size: 20px; */
   list-style: none;
   line-height: 35px;
   margin-right: 120px;

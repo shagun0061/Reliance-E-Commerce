@@ -14,6 +14,12 @@ ftr.innerHTML=footer();
 
 let posters=[];
 
+let user = JSON.parse(localStorage.getItem('loginData')) || false;
+let login = document.querySelector('#L');
+let flag = JSON.parse(localStorage.getItem('loginKey')) || false;
+if(flag){
+  login.innerText = `Hi ${user.first_name}`;
+}
 
 // async function getData(){
 //     let res=await fetch("https://fakestoreapi.com/products");

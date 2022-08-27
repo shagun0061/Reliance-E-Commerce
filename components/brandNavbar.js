@@ -41,15 +41,14 @@ let brandNavbar = () => {
   </div>
   <div id="search-bar">
     <div>
-      <img src="https://www.reliancedigital.in/build/client/images/loaders/rd_logo.svg" alt="reliancedigital.in">
+      <a href='./index.html'><img src="https://www.reliancedigital.in/build/client/images/loaders/rd_logo.svg" alt="reliancedigital.in"></a>
     </div>
     <div>
       <input class='input' type="text" placeholder="Find your favorite products"><i class="fa fa-search"
         style="color: rgb(187, 187, 187);"></i>
     </div>
     <div class="cart">
-      <span>Select your PIN Code | <i class="fa-solid fa-cart-shopping"></i> Cart | <i class="fa-solid fa-user"></i>
-        Login</span>
+      <span>Select your PIN Code | <a class="a" id="C" href="#"><i class="fa-solid fa-cart-shopping"></i> Cart</a> | <a class="a" id="L" href="./login.html"><i class="fa-solid fa-user"></i>Login</a></span>
     </div>
   </div>
   <nav>
@@ -105,7 +104,7 @@ let brandNavbar = () => {
         </div>
           </li>
           <li>
-            <div>TELEVISIONS <i class="fa-solid fa-angle-down"></i></div>
+            <div><a href='./television.html'>TELEVISIONS <i class="fa-solid fa-angle-down"></i></a></div>
             <div class="list-divs-flex">
               <div>
                 <ul>
@@ -245,7 +244,7 @@ let brandNavbar = () => {
           </li>
           <li>
             <div>
-              <a href='.computer.html'>COMPUTERS <i class="fa-solid fa-angle-down"></i></a>
+              <a href='./computer.html'>COMPUTERS <i class="fa-solid fa-angle-down"></i></a>
             </div>
             <div class="list-divs-flex">
               <div>

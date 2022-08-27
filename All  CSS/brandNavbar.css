@@ -25,29 +25,34 @@ need to be added into every file after importing the upper navbar js */
   text-transform: uppercase;
 }
 
-table{
+#upper-navbar table{
   width: 100%;
   border-bottom: 1px solid rgb(181, 181, 181);
 }
 
-table tr{
+#upper-navbar table tr{
   height: 20px;
 }
 
-table td:first-child, td:last-child{
+#upper-navbar table td:first-child, td:last-child{
   border-right: transparent;
 }
 
-table td{
+#upper-navbar table td{
   border-left: transparent;
   border-right: 1px solid rgb(181, 181, 181);
   border-bottom: transparent;
   height: 30px;
 }
 
-tr td a{
+#upper-navbar tr td a{
   text-decoration: none;
   color: #000;
+}
+
+#products-bar a{
+  text-decoration: none;
+  color: #fff;
 }
 
 /* upper navbar completed here */
@@ -71,6 +76,14 @@ tr td a{
   padding: 10px;
   border: none;
   border-radius: 100px;
+  color: #000;
+}
+
+#L, #C{
+  text-decoration: none;
+  color: #003380;
+  font-weight: bold;
+  margin-right: 10px;
 }
 
 .navbar{

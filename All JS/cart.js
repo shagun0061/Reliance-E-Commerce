@@ -138,6 +138,13 @@ let append = (data) => {
   localStorage.setItem("totalprice", JSON.stringify(totalprice));
 };
 
+let user1 = JSON.parse(localStorage.getItem('loginData')) || false;
+let login = document.querySelector('#L');
+let flag = JSON.parse(localStorage.getItem('loginKey')) || false;
+if(flag){
+  login.innerText = `Hi ${user1.first_name}`;
+}
+
 append(user);
 
 function removebtnfun(ele) {
