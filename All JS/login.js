@@ -1,11 +1,11 @@
 
-import brandNavbar from "./components/brandNavbar.js"
+import brandNavbar from "../components/brandNavbar.js"
 
 let navbar=document.getElementById("nav")
 
 navbar.innerHTML=brandNavbar();
 
-import footer from "./components/footer.js"
+import footer from "../components/footer.js"
 
 let ftr=document.getElementById("footer")
 
