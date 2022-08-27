@@ -1,4 +1,4 @@
-let footer = () =>{
+let footer = () => {
   return `<div>
   <div>
     <div class="flex">

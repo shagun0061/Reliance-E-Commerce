@@ -141,7 +141,7 @@ let append = (data) => {
 let user1 = JSON.parse(localStorage.getItem('loginData')) || false;
 let login = document.querySelector('#L');
 let flag = JSON.parse(localStorage.getItem('loginKey')) || false;
-if(flag){
+if (flag) {
   login.innerText = `Hi ${user1.first_name}`;
 }
 

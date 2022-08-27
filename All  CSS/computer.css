@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -7,31 +7,33 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-body{
+body {
     overflow: hidden;
 }
 
-h3{
+h3 {
     font-size: 14px;
     margin-bottom: 22px;
 }
 
 
 
-#des p{
+#des p {
 
     font-size: 12px;
     margin-bottom: 22px;
 }
-#des ul{
+
+#des ul {
     font-size: 14px;
     font-weight: 500;
 }
 
-#des li{
+#des li {
     font-size: 12px;
 }
-#top_carousel{
+
+#top_carousel {
     overflow: hidden;
     border: 1px solid #ccc;
     width: 100%;
@@ -41,45 +43,52 @@ h3{
 
 
 }
-#top_carousel>img{
+
+#top_carousel>img {
     width: 100%;
     height: 100%;
     position: relative;
 }
-#container{
+
+#container {
     width: 100%;
     height: auto;
     border: 1px solid #ccc;
     display: flex;
     justify-content: space-around;
 }
-#left_side{
+
+#left_side {
     width: 70%;
     border: 1px solid #ccc;
 }
-#right_side{
+
+#right_side {
     width: 20%;
     /* border: 1px solid #ccc; */
 }
-#carousel_A{
+
+#carousel_A {
     height: 133px;
     display: flex;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
     border: 1px solid #ccc;
 }
-#carousel_C{
+
+#carousel_C {
     height: 133px;
     display: flex;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
     border: 1px solid#ccc;
 }
-#carousel_B{
+
+#carousel_B {
     height: auto;
     border: 1px solid #ccc;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
     grid-gap: 2px;
     padding: 55px;
@@ -89,13 +98,14 @@ h3{
     border: 1px solid #ccc;
 } */
 
-#carousel_1{
+#carousel_1 {
     width: 100%;
     height: 333px;
     border: 1px solid #ccc;
     position: relative;
 }
-#carousel_1>div{
+
+#carousel_1>div {
     width: 99.5%;
     height: 99.5%;
     border: 1px solid #ccc;
@@ -106,16 +116,19 @@ h3{
     margin: auto;
     /* grid-template-columns: repeat(5,1fr); */
     /* flex-wrap:nowrap; */
-} 
-#carousel_1>div:hover{
+}
+
+#carousel_1>div:hover {
     cursor: pointer;
 }
-#carousel_1>div>div{
+
+#carousel_1>div>div {
     width: 17%;
     height: 100%;
     /* border: 1px solid red; */
 }
-#carousel_1 img{
+
+#carousel_1 img {
     width: 50%;
     display: block;
     margin: auto;
@@ -123,78 +136,92 @@ h3{
     margin-top: 22px;
     margin-bottom: 22px;
 }
-#carousel_1 img:hover{
+
+#carousel_1 img:hover {
     transform: scale(1.09);
 }
-.ptitle{
+
+.ptitle {
     color: blue;
 }
-.pPrice{
+
+.pPrice {
     font-weight: bold;
 }
+
 /* .pBox{
     width: 222px;
 } */
-#carousel_2{
+#carousel_2 {
     height: 222px;
     border: 1px solid rgb(48, 205, 87);
 }
-#carousel_3{
+
+#carousel_3 {
     height: 222px;
     border: 1px solid rgb(48, 205, 87);
 }
-#carousel_4{
+
+#carousel_4 {
     height: 222px;
     border: 1px solid rgb(48, 205, 87);
 }
-#right{
+
+#right {
     position: absolute;
     right: 10px;
     top: 111px;
     border: 0px;
     color: grey;
     font-size: 33px;
-    background-color:rgb(212, 212, 212,0.0) ;
+    background-color: rgb(212, 212, 212, 0.0);
 }
-#left{
+
+#left {
     position: absolute;
     left: 10px;
     top: 111px;
     border: 0px;
     color: grey;
     font-size: 33px;
-    background-color:rgb(212, 212, 212,0.0) ;
+    background-color: rgb(212, 212, 212, 0.0);
 }
-#right_btn{
+
+#right_btn {
     position: absolute;
     right: 10px;
     top: 111px;
     border: 0px;
     color: grey;
     font-size: 33px;
-    background-color:rgb(212, 212, 212,0.0) ;
+    background-color: rgb(212, 212, 212, 0.0);
 }
-#left_btn{
+
+#left_btn {
     position: absolute;
     left: 10px;
     top: 111px;
     border: 0px;
     color: grey;
     font-size: 33px;
-    background-color:rgb(212, 212, 212,0.0) ;
+    background-color: rgb(212, 212, 212, 0.0);
 }
-.brandimgs{
+
+.brandimgs {
     border: 1px solid #ccc;
     height: 111px;
 }
-#right_side>div{
+
+#right_side>div {
     width: 90%;
 }
-#right_side>div>img{
+
+#right_side>div>img {
     width: 100%;
     height: 111px;
 }
-.broad{
+
+.broad {
     height: 5px;
     color: gray;
 }
@@ -208,6 +235,7 @@ h3{
     font-family: Roboto, "system-ui", sans-serif;
     font-size: 15px;
 }
+
 #des table {
     display: table;
     border-collapse: separate;
@@ -217,13 +245,14 @@ h3{
     border-color: grey;
 }
 
-#des thead>tr>th{
-    background-color:gray;
+#des thead>tr>th {
+    background-color: gray;
     height: 44px;
     width: 25px;
-    
+
 }
-#des tbody>tr td{
+
+#des tbody>tr td {
     margin: auto;
     text-align: center;
 }
@@ -236,7 +265,7 @@ h3{
     margin-top: 25px;
 }
 
-#des{
+#des {
 
     /* border: 1px solid red; */
     display: flex;
@@ -246,18 +275,19 @@ h3{
     padding: 5%;
 }
 
-#des_Right{
+#des_Right {
 
     width: 33%;
-    /* border: 3px solid green; */  
+    /* border: 3px solid green; */
 }
-#des_Left{
+
+#des_Left {
 
     width: 66%;
     /* border: 3px solid blueviolet; */
     padding: 2%;
 }
 
-#des li{
+#des li {
     margin-top: 11px;
 }

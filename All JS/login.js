@@ -43,4 +43,4 @@ let gotoHomapage = (e) => {
     window.location.href = "./index.html"
 }
 
-document.querySelector("#submit").addEventListener("click",login);
+document.querySelector("#submit").addEventListener("click", login);

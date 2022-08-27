@@ -8,11 +8,11 @@ let user = JSON.parse(localStorage.getItem('loginData')) || false;
 
 let cart = document.querySelector("#C");
 
-function gotocart(){
-  if(flag){
+function gotocart() {
+  if (flag) {
     window.location.href = './cart.html'
   }
-  else{
+  else {
     alert('Please login first!');
     window.location.href = 'login.html';
   }
@@ -21,6 +21,6 @@ cart.addEventListener('click', gotocart);
 
 let login = document.querySelector('#L');
 let flag = JSON.parse(localStorage.getItem('loginKey')) || false;
-if(flag){
+if (flag) {
   login.innerText = `Hi ${user.first_name}`;
 }
