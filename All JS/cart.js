@@ -161,7 +161,8 @@ let masaifun = () => {
   if (code == "masai30") {
     let TA = document.querySelector("#TotalcartAmount").innerText;
     TA = +TA;
-    TA = (TA / 10) * 3;
+    let amount = (TA / 10) * 3;
+    TA = TA-amount
     document.querySelector("#TotalcartAmount").innerText = TA;
     localStorage.setItem("totalprice", JSON.stringify(TA));
     document.querySelector("#cartdelcha").style.display = "none";
