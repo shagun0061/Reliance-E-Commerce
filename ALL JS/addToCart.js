@@ -19,6 +19,8 @@ let globalCartArr = JSON.parse(localStorage.getItem("CARTPRODUCT")) || [];
 
 console.log(product)
 
+
+
 let showData = (el) => {
     // console.log(el);
 
@@ -48,10 +50,11 @@ showData(product[0]);
 
 let addToCart = () => {
     globalCartArr.push(product[0]);
-    
+
     localStorage.setItem("CARTPRODUCT", JSON.stringify(globalCartArr));
     alert("Product Added to the Cart");
     window.location.href = "cart.html"
 }
-
+document.getElementById("btn1").addEventListener("click", addToCart);
+document.getElementById("btn2").addEventListener("click", addToCart);
 //    addToCart();

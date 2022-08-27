@@ -7,7 +7,7 @@ document.querySelector("#footer").innerHTML = footer();
 
 
 
-let user = JSON.parse(localStorage.getItem("PRODUCTCART")) || [];
+let user = JSON.parse(localStorage.getItem("CARTPRODUCT")) || [];
 let totalprice = 0;
 
 let x = user.length;
@@ -143,6 +143,7 @@ append(user);
 function removebtnfun(ele) {
   let index = user.indexOf(ele);
   user.splice(index, 1);
+  localStorage.setItem("CARTPRODUCT", JSON.stringify(user))
   console.log(user);
   append(user);
 }

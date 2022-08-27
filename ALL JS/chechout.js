@@ -71,6 +71,7 @@ document.querySelector("#pta").addEventListener("click", pta);
 function pta() {
   alert("Payment Sucessfull");
   setTimeout(function () {
-    alert("Order Confermed");
+    alert("Order Confirmed");
+    window.location.href = './index.html'
   }, 3000);
 }

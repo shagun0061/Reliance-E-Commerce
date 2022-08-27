@@ -43,3 +43,5 @@ let register=(e)=>{
     window.location.href="login.html";
     }
 }
+let form = document.querySelector('#registration_form');
+form.addEventListener('submit', register)

@@ -222,6 +222,9 @@ function goback(){
     append(arr1)
 }
 
+document.getElementById("left_btn").addEventListener("click",goback);
+document.getElementById("right_btn").addEventListener("click",goNxt);
+
 function append(data){
     let container=document.getElementById("p_div");
     container.innerHTML=null;
