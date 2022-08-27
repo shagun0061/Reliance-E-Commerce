@@ -21,7 +21,11 @@ body {
   width: 32%;
 }
 
-input {
+.a{
+  text-decoration: none;
+}
+
+.input {
   margin-top: 5px;
   width: 80%;
   box-sizing: border-box;
