@@ -1,3 +1,6 @@
+ 
+ 
+ 
 /* body{
   overflow: hidden;
 } */
@@ -9,6 +12,7 @@
 
 /* uppen navbar section consisting of brands promise and other tabs,
 need to be added into every file after importing the upper navbar js */
+ 
 #upper-navbar{
   display: flex;
   justify-content: space-evenly;

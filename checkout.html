@@ -7,13 +7,16 @@
     <title>CHECKOUT</title>
     <link rel="icon" type="image/x-icon" href="./components/download1.png">
     <link rel="stylesheet" href="./All  CSS/checkout.css">
+    <link rel="stylesheet" href="./All  CSS/brandNavbar.css">
+    <link rel="stylesheet" href="./All  CSS/footer.css">
 </head>
 <body>
+    <div id="navbar"></div>
     <div>
         <div id="Shippingadress">
             <h3>SHIPPING ADDRESS</h3>
             <div>There are no saved addresses.</div>
-            <button id="newAddress" onclick="address()">ADD NEW SHIPPING ADDRESS</button>
+            <button id="newAddress"   >ADD NEW SHIPPING ADDRESS</button>
         </div>
         <div id="oneAdress">
             <div> <h1>Add a new Address</h1></div>
@@ -29,7 +32,7 @@
             <input type="text" name="" id="lno" placeholder="Enter Landline No"><br>
             <div id="sub">
             <button id="cancel" onclick="cancel()">Cancel</button>
-            <button id="adressSubmit" onclick="submit()">Submit</button>
+            <button id="adressSubmit"   >Submit</button>
             </div>
     
         </div>
@@ -49,12 +52,16 @@
                     <h3 id="subto1">0000</h3>
                 </div>
                 <p>*In order to authenticate and redeem Store Credit or ROne Loyalty Points an OTP validation shall be required. Post successful OTP verification, further payment if any shall be facilitated.</p>
-                <button id="lastbtn">PROCEED TO PAYMENT</button>
+                <button id="lastbtn"  >PROCEED TO PAYMENT</button>
             </div>
         </div>
+        <div id="last">
+            <img src="./components/CaptureCW.PNG" alt="">
+            <button id="pta"  >RS</button>
+        </div>
     </div>
-    
+    <div id="footer"></div>
      
 </body>
 </html>
- <script src="./ALL JS/chechout.js"></script>
+ <script src="./ALL JS/chechout.js" type="module"></script>
