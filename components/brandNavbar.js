@@ -245,7 +245,7 @@ let brandNavbar = () => {
           </li>
           <li>
             <div>
-              COMPUTERS <i class="fa-solid fa-angle-down"></i>
+              <a href='.computer.html'>COMPUTERS <i class="fa-solid fa-angle-down"></i></a>
             </div>
             <div class="list-divs-flex">
               <div>
