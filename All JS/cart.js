@@ -1,3 +1,12 @@
+
+import brandNavbar from "../components/brandNavbar.js";
+document.querySelector("#navbar").innerHTML = brandNavbar();
+import footer from "../components/footer.js";
+document.querySelector("#footer").innerHTML = footer();
+
+
+
+
 let user = [
   {
     id: 1,
@@ -32,7 +41,7 @@ let x = user.length;
 document.querySelector("#totalitems").innerText = `My Cart (${x} Items)`;
 
 //? plusfun
-let plusfun = (price,cen) => {
+let plusfun = (price, cen) => {
   let x = cen.value;
   x = +x + 1;
   if (x < 10) {
@@ -41,12 +50,12 @@ let plusfun = (price,cen) => {
     document.querySelector("#TotalPriceCArt").innerText = totalprice.toFixed(2);
     document.querySelector("#TotalcartAmount").innerText =
       totalprice.toFixed(2);
-      localStorage.setItem("totalprice",JSON.stringify(totalprice))
+    localStorage.setItem("totalprice", JSON.stringify(totalprice));
   }
 };
 
 //? minfun
-let minfun = (price,cen) => {
+let minfun = (price, cen) => {
   let x = cen.value;
   x = +x;
   if (x !== 1) {
@@ -55,16 +64,16 @@ let minfun = (price,cen) => {
     document.querySelector("#TotalPriceCArt").innerText = totalprice.toFixed(2);
     document.querySelector("#TotalcartAmount").innerText =
       totalprice.toFixed(2);
-      localStorage.setItem("totalprice",JSON.stringify(totalprice))
+    localStorage.setItem("totalprice", JSON.stringify(totalprice));
   }
 };
 
-                                      //!  Append
+//!  Append
 
 let append = (data) => {
-  totalprice=0;
-  document.querySelector("#cartProduct").innerHTML="";
-  
+  totalprice = 0;
+  document.querySelector("#cartProduct").innerHTML = "";
+
   data.forEach(function (ele, index) {
     let maindiv = document.createElement("div");
     maindiv.setAttribute("id", "CPmaindiv");
@@ -90,7 +99,7 @@ let append = (data) => {
     let min = document.createElement("button");
     min.innerText = "-";
     min.addEventListener("click", function () {
-      minfun(ele.price,cen);
+      minfun(ele.price, cen);
     });
 
     let cen = document.createElement("input");
@@ -100,7 +109,7 @@ let append = (data) => {
     let plus = document.createElement("button");
     plus.innerText = "+";
     plus.addEventListener("click", function () {
-      plusfun(ele.price,cen);
+      plusfun(ele.price, cen);
     });
 
     let quantity = document.createElement("div");
@@ -142,7 +151,7 @@ let append = (data) => {
     let removebtn = document.createElement("button");
     removebtn.innerText = "REMOVE";
     removebtn.addEventListener("click", function () {
-      removebtnfun(ele );
+      removebtnfun(ele);
     });
     let movetowhbtn = document.createElement("button");
     movetowhbtn.innerText = "Move to wishlist";
@@ -152,38 +161,34 @@ let append = (data) => {
     document.querySelector("#cartProduct").append(maindiv);
   });
   document.querySelector("#TotalPriceCArt").innerText = totalprice.toFixed(2);
-document.querySelector("#TotalcartAmount").innerText = totalprice.toFixed(2);
-localStorage.setItem("totalprice",JSON.stringify(totalprice))
+  document.querySelector("#TotalcartAmount").innerText = totalprice.toFixed(2);
+  localStorage.setItem("totalprice", JSON.stringify(totalprice));
 };
 
 append(user);
 
-
-
-function removebtnfun(ele){
+function removebtnfun(ele) {
   let index = user.indexOf(ele);
-  user.splice(index,1);
-  console.log(user)
-   append(user);
+  user.splice(index, 1);
+  console.log(user);
+  append(user);
 }
 
-
-                                                    //!         MASAI30%
-let masaifun=()=>{
-   let code= document.querySelector('#Couponin').value;
-   if(code=="masai30"){
-   let TA=document.querySelector('#TotalcartAmount').innerText;
-   TA=+TA;
-   TA=TA/10*3
-   document.querySelector('#TotalcartAmount').innerText=TA
-   localStorage.setItem("totalprice",JSON.stringify(TA))
-    document.querySelector('#cartdelcha').style.display="none"
-    document.querySelector('#cartdelchad').style.display="flex"
-   }
-
+//!         MASAI30%
+let masaifun = () => {
+  let code = document.querySelector("#Couponin").value;
+  if (code == "masai30") {
+    let TA = document.querySelector("#TotalcartAmount").innerText;
+    TA = +TA;
+    TA = (TA / 10) * 3;
+    document.querySelector("#TotalcartAmount").innerText = TA;
+    localStorage.setItem("totalprice", JSON.stringify(TA));
+    document.querySelector("#cartdelcha").style.display = "none";
+    document.querySelector("#cartdelchad").style.display = "flex";
   }
- document.querySelector('#CouponAplly').addEventListener("click",masaifun)
-let checkout=()=>{
-window.location.href="checkout.html"
-}
-document.querySelector('#cartchekoutbtn').addEventListener("click",checkout);
+};
+document.querySelector("#CouponAplly").addEventListener("click", masaifun);
+let checkout = () => {
+  window.location.href = "checkout.html";
+};
+document.querySelector("#cartchekoutbtn").addEventListener("click", checkout);
