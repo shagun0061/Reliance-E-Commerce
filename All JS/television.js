@@ -36,31 +36,127 @@ let images=document.querySelector("#crauseImg");
 
 // fetch the API
 
+    // mid crauser js
 
-// let url= "https://fakestoreapi.com/products/"
+let arr1=[];
+let arr2=[];
+let arr3=[];
+let arr4=[];
+let data;
+let start;
+let end;
 
-let data= async ()=>{
-    const url=`https://fakestoreapi.com/products/`
-    let res=await fetch(url)
-    let me=await res.json()
-    console.log(me);
-    Append(me);
+async function getProductData(){
+    let res=await fetch("https://fakestoreapi.com/products/");
+     data=await res.json();
+    // console.log(data)
+    // append(data)
+    // let gap=5;
+    start=0;
+    end=(data.length/4);
+     let arr1=[]
+    for(let i=start;i<end;i++){
+        arr1.push(data[i]);
+    }
+    // for(let i=5;i<(data.length/4)+5;i++){
+    //     arr2.push(data[i]);
+    // }
+    // for(let i=10;i<(data.length/4)+10;i++){
+    //     arr3.push(data[i]);
+    // }
+    // for(let i=15;i<(data.length/4)+15;i++){
+    //     arr4.push(data[i]);
+    // }
+console.log(arr1,arr2,arr3,arr4)
+append(arr1)
 }
 
+getProductData();
 
-let Append=(data)=>{
-    let container=document.getElementById("conatiner");
+
+function goNxt(){
+    let arr1=[]
+    start+=1;
+    end+=1;
+    if(end>data.length){
+        end=(data.length/4);
+    }
+    if(start>data.length-5){
+        start=0;
+    }
+    for(let i=start;i<end;i++){
+        arr1.push(data[i]);
+    }
+    append(arr1)
+}
+function goback(){
+    let arr1=[]
+    
+    end-=1;
+    start=end-5;
+    if(end<4){
+        end=data.length-1;
+        start=(data.length-1)-5;
+    }
+    // if(start<5){
+    //     start=data.length-5;
+    // }
+    for(let i=end;i>=start;i--){
+        arr1.push(data[i]);
+    }
+    append(arr1)
+}
+
+function append(data){
+    let container=document.getElementById("p_div");
     container.innerHTML=null;
-    data.forEach(el=>{
+
+    data.forEach(function(el){
         let div=document.createElement("div");
+        div.setAttribute("class","pBox");
+        let img=document.createElement("img");
+        img.src=el.image;
+        let name=document.createElement("p");
+        name.innerText=el.title;
+        name.setAttribute("class","ptitle")
+        let cat=document.createElement("p");
+        cat.innerText=`Category- Rs${el.category}`;
+        // let des=document.createElement("p");
+        // des.innerText=el.description;
+        let pri=document.createElement("p");
+        pri.innerText=`Price:- Rs.${el.price}`;
+        pri.setAttribute("class","pPrice")
+        let rating=document.createElement("p");
+        rating.innerText=`Rating:- ★${el.rating.rate}★`;
+        div.addEventListener("click",function(){
+            addToCart(el);
+        })
+        div.append(img,name,cat,pri,rating);
+        container.append(div)
+    });
 
-        let image=document.createElement("img");
-        image.src=el.image
-
-        let prc=document.createElement("p");
-        prc.innerText=el.price;
-
-        div.append(image,prc);
-        container.append(div);
-    })
 }
+
+
+function addToCart(el){
+    console.log(el);
+    let arr=[];
+    arr.push(el);
+    localStorage.setItem("CART_PRODUCT",JSON.stringify(arr));
+    window.location.href="addToCart.html"
+}
+
+
+
+
+import brandNavbar from "../components/brandNavbar.js"
+
+let navbar=document.getElementById("nav")
+
+navbar.innerHTML=brandNavbar();
+
+import footer from "../components/footer.js"
+
+let ftr=document.getElementById("footer")
+
+ftr.innerHTML=footer();

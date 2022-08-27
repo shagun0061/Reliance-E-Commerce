@@ -1,74 +1,11 @@
 
  
   
-  /* uppen navbar section consisting of brands promise and other tabs,
-  need to be added into every file after importing the upper navbar js */
-  #upper-navbar{
-    display: flex;
-    justify-content: space-evenly;
-    border: 1px solid transparent;
-  }
   
-  #upper-navbar h4{
-    text-align: center;
-    margin-top: -1px;
-  }
   
-  table{
-    width: 100%;
-    border-bottom: 1px solid rgb(181, 181, 181);
-  }
   
-  td:first-child, td:last-child{
-    border-right: transparent;
-  }
   
-  td{
-    border-left: transparent;
-    border-right: 1px solid rgb(181, 181, 181);
-    border-bottom: transparent;
-    height: 30px;
-    padding: 15px;
-  }
-  
-  a{
-    text-decoration: none;
-    color: #000;
-  }
-  
-  /* upper navbar completed here */
-  
-  #search-bar{
-    width: 100%;
-    display: grid;
-    grid-template-columns:1fr 1.5fr 1fr;
-    margin-top: 5px;
-  }
-  
-  input{
-    margin-top: 5px;
-    width: 80%;
-    box-sizing: border-box;
-    padding: 10px;
-    border: none;
-    border-radius: 100px;
-  }
-  
-  .navbar{
-    background-color: #e4252a;
-    margin: -10px;
-  }
-  
-  .cart{
-    display: flex;
-    justify-content: flex-end;
-    padding: 10px;
-  }
-  
-  /* All icons classes: */
-  .fa-search{
-    margin-left: -30px;
-  }
+ 
   /* All icons classes end here */
 
  /* for crauser div */
@@ -124,10 +61,10 @@
     justify-content: space-between;
     /* border: 1px solid red; */
   }
-  #big_div>div{
+  /* #big_div>div{
     /* border: 1px solid green; */
   
-  }
+  /* }  */
   .div1{
     width: 69%;
     margin-left: 3px;
@@ -256,3 +193,102 @@
 #div2_child>div>img{
   width: 100%;
 }
+
+/* mid crauser css */
+
+#carousel_1>div{
+  width: 99.5%;
+  height: 99.5%;
+  border: 1px solid #ccc;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  /* grid-template-columns: repeat(5,1fr); */
+  /* flex-wrap:nowrap; */
+} 
+#carousel_1{
+  position: relative;
+}
+#carousel_1>div:hover{
+  cursor: pointer;
+}
+#carousel_1>div>div{
+  width: 17%;
+  height: 100%;
+  /* border: 1px solid red; */
+}
+#carousel_1 img{
+  width: 50%;
+  display: block;
+  margin: auto;
+  height: 44%;
+  margin-top: 22px;
+  margin-bottom: 22px;
+}
+#carousel_1 img:hover{
+  transform: scale(1.09);
+}
+#right_btn{
+  position: absolute;
+  right: 10px;
+  top: 180px;
+  border: 0px;
+  color: grey;
+  font-size: 38px;
+  font-weight: bolder;
+  cursor: pointer;
+  background-color:rgb(212, 212, 212,0.0) ;
+}
+#left_btn{
+  position: absolute;
+  left: 10px;
+  top: 180px;
+  border: 0px;
+  /* border: 4px double red; */
+  color: grey;
+  font-size: 38px;
+  font-weight: bolder;
+  cursor: pointer;
+  background-color:rgb(212, 212, 212,0.0) ;
+}
+
+    /* BOTTOM SECTION CSS */
+
+#des p{
+  font-size: 12px;
+  margin-bottom: 22px;
+}
+#des ul{
+  font-size: 14px;
+  font-weight: 500;
+}
+#des li{
+  font-size: 12px;
+  margin-top: 11px;
+}
+#des{
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  padding: 20px;
+}
+/* #des>div{
+  margin: auto;
+} */
+#des_Right{
+  width: 38%;
+  /* border: 3px solid green; */  
+}
+#des_Left{
+  width: 60%;
+  padding: 10px;
+   /* border: 3px solid blueviolet; */
+}
+#des tr>td:nth-child(2){
+  color: blue;
+}
+  
