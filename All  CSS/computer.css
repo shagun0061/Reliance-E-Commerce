@@ -12,13 +12,14 @@ h3{
 
 
 
-#bottom_section p{
+#des p{
 
     font-size: 12px;
     margin-bottom: 22px;
 }
 ul{
     font-size: 14px;
+    font-weight: 500;
 }
 li{
     font-size: 12px;
