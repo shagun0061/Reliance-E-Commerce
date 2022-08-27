@@ -56,8 +56,6 @@ tr td a{
   display: grid;
   grid-template-columns: 1fr 1.5fr 1fr;
   margin-top: 5px;
-  /* margin-top: 10px; */
-  /* padding: 10px; */
 }
 
 #search-bar div img{
@@ -78,6 +76,7 @@ tr td a{
 .navbar{
   background-color: #e4252a;
   margin: -10px;
+  color: #fff;
 }
 
 .cart{
@@ -86,7 +85,7 @@ tr td a{
   padding: 10px;
 }
 
-#products-bar{
+/* #products-bar{
   display: flex;
   margin-top: 5px;
   justify-content: space-evenly;
@@ -101,6 +100,48 @@ tr td a{
   padding: 5px 10px 5px 10px;
   cursor: pointer;
   /* border: 1px solid; */
+/*} */
+
+#products-bar {
+  background-color: #003380;
+  display: flex;
+  /* justify-content: space-evenly; */
+  cursor: pointer;
+}
+
+#products-bar>li {
+  cursor: pointer;
+  list-style: none;
+  margin-left: 10px;
+  font-size: 12px;
+}
+
+#products-bar>li:hover>div:first-child{
+  background-color: #e4252a;
+  /* width: 100px; */
+}
+
+#products-bar>li>div:first-child{
+  /* border: 1px solid; */
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#products-bar>li:hover .list-divs-flex{
+  display: block;
+  display: flex;
+}
+
+#products-bar>li ul{
+  list-style-type: none;
+}
+
+.list-divs-flex{
+  display: none;
+  /* border: 1px solid; */
+  margin-top: 20px;
 }
 
 /* All icons classes: */
