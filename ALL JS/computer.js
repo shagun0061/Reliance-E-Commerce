@@ -14,6 +14,20 @@ ftr.innerHTML=footer();
 
 let posters=[];
 
+
+// async function getData(){
+//     let res=await fetch("https://fakestoreapi.com/products");
+//     let data= await res.json();
+//     console.log(data);
+// }
+
+// getData();
+
+// let posters=[];
+
+// let posterConsFunc=(i)=>{
+//     this.img=i;
+// }
 function posterConsFunc(i){
     this.img=i;
 }
