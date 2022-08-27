@@ -1,3 +1,20 @@
+
+
+import brandNavbar from "./components/brandNavbar.js"
+
+let navbar=document.getElementById("nav")
+
+navbar.innerHTML=brandNavbar();
+
+import footer from "./components/footer.js"
+
+let ftr=document.getElementById("footer")
+
+ftr.innerHTML=footer();
+
+let posters=[];
+
+
 // async function getData(){
 //     let res=await fetch("https://fakestoreapi.com/products");
 //     let data= await res.json();
@@ -6,7 +23,7 @@
 
 // getData();
 
-let posters=[];
+// let posters=[];
 
 // let posterConsFunc=(i)=>{
 //     this.img=i;
@@ -238,4 +255,8 @@ function append(data){
 
 function addToCart(el){
     console.log(el);
+    let arr=[];
+    arr.push(el);
+    localStorage.setItem("CART_PRODUCT",JSON.stringify(arr));
+    window.location.href="addToCart.html"
 }
