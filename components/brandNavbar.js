@@ -44,7 +44,7 @@ let brandNavbar = () => {
       <img src="https://www.reliancedigital.in/build/client/images/loaders/rd_logo.svg" alt="reliancedigital.in">
     </div>
     <div>
-      <input type="text" placeholder="Find your favorite products"><i class="fa fa-search"
+      <input class='input' type="text" placeholder="Find your favorite products"><i class="fa fa-search"
         style="color: rgb(187, 187, 187);"></i>
     </div>
     <div class="cart">
