@@ -1,3 +1,18 @@
+
+import brandNavbar from "./components/brandNavbar.js"
+
+let navbar=document.getElementById("nav")
+
+navbar.innerHTML=brandNavbar();
+
+import footer from "./components/footer.js"
+
+let ftr=document.getElementById("footer")
+
+ftr.innerHTML=footer();
+
+
+
 let userArr=JSON.parse(localStorage.getItem("RegistrationData")) || [];
 
 let register=(e)=>{
